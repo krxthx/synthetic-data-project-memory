@@ -13,6 +13,8 @@
   ],
   "record_counts":{"ATLAS":420,"PULSE":360,"NOVA":400,"HARBOR":480,"ORBIT":340},
   "total_records":2000,
-  "total_people":84,
+  "organization_records":27,
+  "total_memory_records":2027,
+  "total_people":93,
   "codebase_included":false
 }

@@ -2,6 +2,8 @@
 
 import argparse
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 
@@ -36,6 +38,8 @@ def main() -> None:
         records = load_records(project_dir)
         write_records(project_dir / "records.jsonl", records)
         print(f"{project}: {len(records)} records")
+
+    subprocess.run([sys.executable, str(Path(__file__).with_name("build_organization_records.py"))], check=True)
 
 
 if __name__ == "__main__":

@@ -3,11 +3,13 @@
 A dense synthetic enterprise corpus for testing long-term organizational and project memory across multiple projects.
 
 ## Organization
-**Meridian Group** is a fictional enterprise used throughout this dataset. The corpus spans five transformation programs and intentionally contains overlapping facts, changing decisions, cross-project dependencies, shared SMEs, client feedback, historical context, and superseded artifacts.
+**Meridian Group** is a fictional enterprise used throughout this dataset. The corpus spans five transformation programs plus organization-wide HR, IT and Administration policy memory. It intentionally contains overlapping facts, changing decisions, cross-project dependencies, shared SMEs, client feedback, historical context, superseded artifacts and policy clarifications.
 
 ## Scope
 - 5 projects
-- 2,000 normalized records
+- 2,000 project records and 27 organization records
+- 9 organization-wide policies across HR, IT and Administration
+- 93 people, including corporate policy owners
 - Timeline: 2026-01-05 to 2026-06-19
 - Sources: Teams, Outlook, calendar recording transcripts, SharePoint, OneDrive, Confluence
 - Rich artifacts: PDF, DOCX, CSV and SVG architecture diagrams
@@ -19,6 +21,15 @@ A dense synthetic enterprise corpus for testing long-term organizational and pro
 - **Nova Sales Opportunity Intelligence**: evidence-backed sales opportunity recommendations
 - **Harbor Identity Modernization**: identity, provisioning, SSO and access governance
 - **Orbit Financial Planning**: rolling forecast and scenario planning
+
+## Organization data
+
+`data/organization/` contains Meridian-level material that is independent of any one project:
+
+- HR policies covering flexible work, leave, accommodation, performance, learning and mobility.
+- IT policies covering acceptable use, endpoints, remote access, identity, privileged access, data classification, retention and generative AI.
+- Administration policies covering procurement, vendors, travel, expense, workplace access, visitors and business continuity.
+- A structured policy catalog, governance register and 27 normalized policy announcements, guidance messages and approved clarifications.
 
 The dataset is synthetic. Its purpose is to test ingestion, temporal reasoning, provenance, conflict resolution, SME discovery, and multi-file long-term memory generation.
 
@@ -33,7 +44,7 @@ Every canonical record retains its original source (`teams`, `outlook`, `transcr
 
 ## Integrity
 
-Rebuild each canonical file from its six source files:
+Rebuild each project canonical file from its six source files and regenerate the organization policy records:
 
 ```sh
 python3 scripts/rebuild_records.py

@@ -101,6 +101,44 @@ def validate_project(project: str, target: int) -> tuple[int, int]:
     return len(records), len(artifact_names)
 
 
+def validate_organization(people: list[dict]) -> list[dict]:
+    organization_dir = DATA / "organization"
+    catalog = json.loads((organization_dir / "policy_catalog.json").read_text(encoding="utf-8"))
+    assert len(catalog) == 9, f"expected 9 organization policies, found {len(catalog)}"
+    assert len({policy["id"] for policy in catalog}) == 9, "duplicate organization policy IDs"
+    assert {policy["function"] for policy in catalog} == {"HR", "IT", "Administration"}, "incomplete policy functions"
+
+    people_by_id = {person["id"]: person for person in people}
+    policy_ids = {policy["id"] for policy in catalog}
+    for policy in catalog:
+        assert policy["owner_id"] in people_by_id, f"{policy['id']}: unknown owner"
+        assert policy["approver_id"] in people_by_id, f"{policy['id']}: unknown approver"
+        policy_path = organization_dir / policy["file"]
+        assert policy_path.is_file(), f"{policy['id']}: missing policy document"
+        content = policy_path.read_text(encoding="utf-8")
+        assert policy["id"] in content, f"{policy['id']}: document ID mismatch"
+        assert people_by_id[policy["owner_id"]]["name"] in content, f"{policy['id']}: owner missing from document"
+        assert len(content.split()) >= 300, f"{policy['id']}: policy document is too sparse"
+
+    with (organization_dir / "policy_register.csv").open(encoding="utf-8", newline="") as source:
+        register = list(csv.DictReader(source))
+    assert {row["policy_id"] for row in register} == policy_ids, "policy register differs from catalog"
+    register_by_id = {row["policy_id"]: row for row in register}
+    for policy in catalog:
+        row = register_by_id[policy["id"]]
+        for field in ("title", "function", "version", "status", "owner_id", "approver_id", "effective_date", "review_date", "file"):
+            assert row[field] == policy[field], f"{policy['id']}: register mismatch for {field}"
+
+    records = read_jsonl(organization_dir / "records.jsonl")
+    assert len(records) == 27, f"expected 27 organization records, found {len(records)}"
+    assert len({record["id"] for record in records}) == 27, "duplicate organization record IDs"
+    assert records == sorted(records, key=lambda record: (record["timestamp"], record["id"])), "organization records are not sorted"
+    assert all(record["organization"] == "Meridian Group" for record in records), "organization record mismatch"
+    assert all(record["project_id"] is None and record["scope"] == "organization" for record in records), "organization scope mismatch"
+    assert {record["metadata"]["policy_id"] for record in records} == policy_ids, "organization records omit policies"
+    return records
+
+
 def main() -> None:
     total = 0
     all_ids = set()
@@ -114,11 +152,22 @@ def main() -> None:
         print(f"{project}: {count} records, {artifact_count} artifacts")
 
     people = json.loads((DATA / "people.json").read_text(encoding="utf-8"))
+    assert len(people) == 93, f"expected 93 people, found {len(people)}"
+    assert len({person["id"] for person in people}) == 93, "duplicate people IDs"
+    organization_records = validate_organization(people)
+    organization_ids = {record["id"] for record in organization_records}
+    assert not all_ids.intersection(organization_ids), "organization IDs overlap project IDs"
+    profile = json.loads((DATA / "organization.json").read_text(encoding="utf-8"))
+    assert profile["total_records"] == total, "organization profile project count mismatch"
+    assert profile["organization_records"] == len(organization_records), "organization profile policy-record count mismatch"
+    assert profile["total_memory_records"] == total + len(organization_records), "organization profile total count mismatch"
+    assert profile["total_people"] == len(people), "organization profile people count mismatch"
     compressed = list(DATA.rglob("*.gz")) + list(DATA.rglob("*.xz")) + list(DATA.rglob("*.zip"))
     assert not compressed, f"compressed files remain: {', '.join(str(path) for path in compressed)}"
     assert people, "people directory is empty"
     assert total == 2000, f"expected 2000 total records, found {total}"
-    print(f"total: {total} records, {len(people)} people")
+    print(f"organization: {len(organization_records)} records, 9 policies")
+    print(f"total: {total + len(organization_records)} records, {len(people)} people")
 
 
 if __name__ == "__main__":
