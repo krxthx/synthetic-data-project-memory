@@ -1,0 +1,3 @@
+dependency_id,project,dependency,owner,impact,status
+ATLAS-DEP01,HARBOR,Interim SSO bridge,Rhea Pillai,Pilot authentication,Active
+ATLAS-DEP02,NOVA,Shared CRM identity-quality concern,Adrian Shah,Customer/account consistency,Watching

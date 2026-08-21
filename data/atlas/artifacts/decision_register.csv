@@ -1,0 +1,6 @@
+decision_id,topic,decision,owner,rationale,status
+ATLAS-D01,Phase 1 scope,Enterprise onboarding is phase 1; SMB is deferred,Samir Rao,Protect the launch window and avoid mixing materially different operating models.,Accepted
+ATLAS-D02,Identity authority,CRM remains authoritative for customer identity and onboarding status,Adrian Shah,Avoid duplicate master data and preserve existing customer-operations controls.,Accepted
+ATLAS-D03,Authentication,Atlas uses the Harbor interim SSO bridge for pilot,Rhea Pillai,Decouple the Atlas pilot from the full Harbor migration while retaining enterprise identity controls.,Accepted
+ATLAS-D04,Exception handling,High-risk onboarding exceptions require human approval,Sofia Green,"Legal, security, and contractual exceptions require accountable human judgment.",Accepted
+ATLAS-D05,Regional process,A common stage taxonomy is mandatory; regions may add governed substeps,Rachel Brooks,Provide enterprise reporting consistency without erasing legitimate regional process differences.,Accepted
