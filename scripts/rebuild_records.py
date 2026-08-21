@@ -40,6 +40,7 @@ def main() -> None:
         print(f"{project}: {len(records)} records")
 
     subprocess.run([sys.executable, str(Path(__file__).with_name("build_organization_records.py"))], check=True)
+    subprocess.run([sys.executable, str(Path(__file__).with_name("build_golden_memories.py"))], check=True)
 
 
 if __name__ == "__main__":

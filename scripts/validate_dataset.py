@@ -11,6 +11,7 @@ from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
+GOLDENS = ROOT / "goldens"
 TARGETS = {
     "atlas": 420,
     "pulse": 360,
@@ -38,6 +39,7 @@ ARTIFACTS = {
     "steering_committee_pack.pdf",
     "uat_and_acceptance_plan.docx",
 }
+GOLDEN_COUNTS = {"ATLAS": 6, "PULSE": 6, "NOVA": 6, "HARBOR": 6, "ORBIT": 6, "ORGANIZATION": 9}
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -139,12 +141,61 @@ def validate_organization(people: list[dict]) -> list[dict]:
     return records
 
 
+def validate_golden_memories(records_by_scope: dict[str, list[dict]]) -> None:
+    combined = []
+    all_golden_ids = set()
+    for scope, expected_count in GOLDEN_COUNTS.items():
+        directory = GOLDENS / scope.lower()
+        memories = json.loads((directory / "golden_memories.json").read_text(encoding="utf-8"))
+        assert len(memories) == expected_count, f"{scope}: expected {expected_count} golden memories"
+        records = {record["id"]: record for record in records_by_scope[scope]}
+        for memory in memories:
+            assert memory["id"] not in all_golden_ids, f"duplicate golden-memory ID: {memory['id']}"
+            all_golden_ids.add(memory["id"])
+            assert memory["scope"] == scope, f"{memory['id']}: scope mismatch"
+            assert memory["status"] == "current" and memory["valid_to"] is None, f"{memory['id']}: invalid status"
+            assert len(memory["canonical_fact"].split()) >= 8, f"{memory['id']}: canonical fact is too sparse"
+            assert len(memory["rationale"].split()) >= 8, f"{memory['id']}: rationale is too sparse"
+            assert len(memory["evidence"]) >= 3, f"{memory['id']}: insufficient evidence"
+            assert len({item["source"] for item in memory["evidence"]}) >= 2, f"{memory['id']}: insufficient source diversity"
+            for item in memory["evidence"]:
+                assert item["record_id"] in records, f"{memory['id']}: unknown evidence {item['record_id']}"
+                record = records[item["record_id"]]
+                for field in ("source", "type", "timestamp"):
+                    assert item[field] == record[field], f"{memory['id']}: stale evidence metadata for {item['record_id']}"
+            assert memory["valid_from"] == min(item["timestamp"] for item in memory["evidence"]), f"{memory['id']}: invalid start date"
+            evaluation = memory["evaluation"]
+            assert len(evaluation["questions"]) >= 2, f"{memory['id']}: insufficient questions"
+            assert len(evaluation["required_concepts"]) >= 2, f"{memory['id']}: insufficient required concepts"
+            assert evaluation["invalid_claims"], f"{memory['id']}: missing invalid claims"
+        combined.extend(memories)
+
+    aggregate = read_jsonl(GOLDENS / "golden_memories.jsonl")
+    assert len(aggregate) == sum(GOLDEN_COUNTS.values()), "aggregate golden-memory count mismatch"
+    assert {memory["id"]: memory for memory in aggregate} == {memory["id"]: memory for memory in combined}, "aggregate golden memories differ from scope files"
+    memories_by_id = {memory["id"]: memory for memory in aggregate}
+    questions = read_jsonl(GOLDENS / "golden_questions.jsonl")
+    assert len(questions) == sum(len(memory["evaluation"]["questions"]) for memory in aggregate), "golden-question count mismatch"
+    assert len({question["id"] for question in questions}) == len(questions), "duplicate golden-question IDs"
+    for question in questions:
+        assert question["memory_id"] in memories_by_id, f"{question['id']}: unknown golden memory"
+        memory = memories_by_id[question["memory_id"]]
+        assert question["scope"] == memory["scope"], f"{question['id']}: scope mismatch"
+        assert question["question"] in memory["evaluation"]["questions"], f"{question['id']}: unknown question text"
+        assert question["canonical_answer"] == memory["canonical_fact"], f"{question['id']}: canonical answer mismatch"
+        assert question["required_concepts"] == memory["evaluation"]["required_concepts"], f"{question['id']}: rubric mismatch"
+        assert question["invalid_claims"] == memory["evaluation"]["invalid_claims"], f"{question['id']}: invalid-claim mismatch"
+        assert question["evidence_ids"] == [item["record_id"] for item in memory["evidence"]], f"{question['id']}: evidence mismatch"
+
+
 def main() -> None:
     total = 0
     all_ids = set()
+    records_by_scope = {}
     for project, target in TARGETS.items():
         count, artifact_count = validate_project(project, target)
         records = read_jsonl(DATA / project / "records.jsonl")
+        records_by_scope[project.upper()] = records
         ids = {record["id"] for record in records}
         assert not all_ids.intersection(ids), f"{project}: IDs overlap another project"
         all_ids.update(ids)
@@ -155,6 +206,7 @@ def main() -> None:
     assert len(people) == 93, f"expected 93 people, found {len(people)}"
     assert len({person["id"] for person in people}) == 93, "duplicate people IDs"
     organization_records = validate_organization(people)
+    records_by_scope["ORGANIZATION"] = organization_records
     organization_ids = {record["id"] for record in organization_records}
     assert not all_ids.intersection(organization_ids), "organization IDs overlap project IDs"
     profile = json.loads((DATA / "organization.json").read_text(encoding="utf-8"))
@@ -162,11 +214,14 @@ def main() -> None:
     assert profile["organization_records"] == len(organization_records), "organization profile policy-record count mismatch"
     assert profile["total_memory_records"] == total + len(organization_records), "organization profile total count mismatch"
     assert profile["total_people"] == len(people), "organization profile people count mismatch"
+    validate_golden_memories(records_by_scope)
     compressed = list(DATA.rglob("*.gz")) + list(DATA.rglob("*.xz")) + list(DATA.rglob("*.zip"))
     assert not compressed, f"compressed files remain: {', '.join(str(path) for path in compressed)}"
+    assert not list(DATA.rglob("*golden*")), "golden files must remain outside data/"
     assert people, "people directory is empty"
     assert total == 2000, f"expected 2000 total records, found {total}"
     print(f"organization: {len(organization_records)} records, 9 policies")
+    print(f"golden memories: {sum(GOLDEN_COUNTS.values())} facts and 78 questions across {len(GOLDEN_COUNTS)} scopes")
     print(f"total: {total + len(organization_records)} records, {len(people)} people")
 
 

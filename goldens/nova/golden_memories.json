@@ -1,0 +1,308 @@
+[
+  {
+    "id": "NOVA-GM-001",
+    "scope": "NOVA",
+    "category": "automation_boundary",
+    "status": "current",
+    "canonical_fact": "Nova recommends actions but cannot automatically change CRM opportunity stages.",
+    "rationale": "Commercial stage changes remain accountable human decisions; the integration must enforce the boundary rather than rely only on UI convention.",
+    "valid_from": "2026-01-05T09:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00328",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-05T09:00:00Z"
+      },
+      {
+        "record_id": "OL-00140",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-05T10:00:00Z"
+      },
+      {
+        "record_id": "TR-00094",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-05T11:00:00Z"
+      },
+      {
+        "record_id": "CF-00085",
+        "source": "confluence",
+        "type": "anti_pattern",
+        "timestamp": "2026-01-13T12:14:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Can Nova update CRM opportunity stages automatically?",
+        "What authority does a Nova recommendation have?"
+      ],
+      "required_concepts": [
+        "recommendations",
+        "cannot change CRM stages",
+        "human accountability"
+      ],
+      "invalid_claims": [
+        "Nova autonomously advances opportunities",
+        "a recommendation is authoritative CRM state"
+      ]
+    }
+  },
+  {
+    "id": "NOVA-GM-002",
+    "scope": "NOVA",
+    "category": "evidence",
+    "status": "current",
+    "canonical_fact": "Every Nova recommendation must cite CRM, meeting or account-plan evidence.",
+    "rationale": "A recommendation without traceable evidence cannot be explained, reviewed or safely acted upon.",
+    "valid_from": "2026-01-08T14:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00364",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-02-09T13:32:00Z"
+      },
+      {
+        "record_id": "OL-00161",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-22T09:37:00Z"
+      },
+      {
+        "record_id": "TR-00095",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-08T14:07:00Z"
+      },
+      {
+        "record_id": "CF-00086",
+        "source": "confluence",
+        "type": "dependency_note",
+        "timestamp": "2026-01-17T15:21:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What evidence must a Nova recommendation provide?",
+        "Can Nova issue an uncited recommendation?"
+      ],
+      "required_concepts": [
+        "every recommendation",
+        "cited evidence",
+        "CRM meeting or account plan"
+      ],
+      "invalid_claims": [
+        "recommendations need no provenance",
+        "model confidence substitutes for evidence"
+      ]
+    }
+  },
+  {
+    "id": "NOVA-GM-003",
+    "scope": "NOVA",
+    "category": "pilot_access",
+    "status": "current",
+    "canonical_fact": "The Nova pilot is limited to strategic account directors.",
+    "rationale": "The restricted cohort supports controlled learning before access is considered for broader sales roles.",
+    "valid_from": "2026-01-12T09:14:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00340",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-16T13:29:00Z"
+      },
+      {
+        "record_id": "OL-00147",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-21T15:49:00Z"
+      },
+      {
+        "record_id": "TR-00096",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-12T09:14:00Z"
+      },
+      {
+        "record_id": "CF-00087",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-21T10:28:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Who can use Nova during the pilot?",
+        "Is the Nova pilot open to all sales staff?"
+      ],
+      "required_concepts": [
+        "strategic account directors",
+        "pilot",
+        "limited cohort"
+      ],
+      "invalid_claims": [
+        "all sales employees have pilot access",
+        "external customers are the pilot cohort"
+      ]
+    }
+  },
+  {
+    "id": "NOVA-GM-004",
+    "scope": "NOVA",
+    "category": "authorization",
+    "status": "current",
+    "canonical_fact": "Nova may surface only evidence already visible to the requesting account team.",
+    "rationale": "Generated explanations, cached recommendations and snippets must not become channels for bypassing source permissions.",
+    "valid_from": "2026-01-09T09:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00352",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-28T09:03:00Z"
+      },
+      {
+        "record_id": "OL-00154",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-06T12:43:00Z"
+      },
+      {
+        "record_id": "TR-00098",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-19T15:28:00Z"
+      },
+      {
+        "record_id": "CF-00084",
+        "source": "confluence",
+        "type": "implementation_decision",
+        "timestamp": "2026-01-09T09:07:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Can Nova reveal evidence the requester cannot access directly?",
+        "How are evidence permissions applied in Nova?"
+      ],
+      "required_concepts": [
+        "requesting account team",
+        "existing permissions",
+        "no leakage"
+      ],
+      "invalid_claims": [
+        "Nova access overrides source permissions",
+        "a summary may reveal restricted evidence"
+      ]
+    }
+  },
+  {
+    "id": "NOVA-GM-005",
+    "scope": "NOVA",
+    "category": "identity_dependency",
+    "status": "current",
+    "canonical_fact": "Nova depends on Atlas-related CRM customer and account identity quality.",
+    "rationale": "Ambiguous or duplicate account identities can attach evidence and recommendations to the wrong commercial entity.",
+    "valid_from": "2026-01-05T11:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00330",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-06T15:14:00Z"
+      },
+      {
+        "record_id": "TR-00094",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-05T11:00:00Z"
+      },
+      {
+        "record_id": "OD-00062",
+        "source": "onedrive",
+        "type": "implementation_spec",
+        "timestamp": "2026-01-05T13:00:00Z"
+      },
+      {
+        "record_id": "SP-00080",
+        "source": "sharepoint",
+        "type": "status_report",
+        "timestamp": "2026-01-09T15:07:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What Atlas-related dependency affects Nova?",
+        "Why does CRM identity quality matter to Nova?"
+      ],
+      "required_concepts": [
+        "Atlas",
+        "CRM account identity",
+        "data quality"
+      ],
+      "invalid_claims": [
+        "Nova is independent of CRM identity",
+        "Harbor owns customer matching"
+      ]
+    }
+  },
+  {
+    "id": "NOVA-GM-006",
+    "scope": "NOVA",
+    "category": "authorization_dependency",
+    "status": "current",
+    "canonical_fact": "Nova depends on Harbor's account-team authorization mappings, separately from its Atlas identity dependency.",
+    "rationale": "A correct account match does not prove that the requester is authorized to see the account's evidence.",
+    "valid_from": "2026-01-05T12:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TR-00095",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-08T14:07:00Z"
+      },
+      {
+        "record_id": "CF-00084",
+        "source": "confluence",
+        "type": "implementation_decision",
+        "timestamp": "2026-01-09T09:07:00Z"
+      },
+      {
+        "record_id": "OD-00064",
+        "source": "onedrive",
+        "type": "test_plan",
+        "timestamp": "2026-01-15T11:14:00Z"
+      },
+      {
+        "record_id": "SP-00079",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-05T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What Harbor capability does Nova rely on?",
+        "Does correct account matching prove Nova evidence access?"
+      ],
+      "required_concepts": [
+        "Harbor",
+        "account-team authorization",
+        "separate from identity"
+      ],
+      "invalid_claims": [
+        "identity matching automatically grants access",
+        "Nova does not depend on Harbor"
+      ]
+    }
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    "id": "ATLAS-GM-001",
+    "scope": "ATLAS",
+    "category": "scope",
+    "status": "current",
+    "canonical_fact": "Atlas phase 1 covers enterprise onboarding only; SMB onboarding is deferred.",
+    "rationale": "The two segments have materially different operating models, and narrowing scope protects the launch window without permanently cancelling SMB work.",
+    "valid_from": "2026-01-05T09:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00001",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-05T09:00:00Z"
+      },
+      {
+        "record_id": "OL-00001",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-05T10:00:00Z"
+      },
+      {
+        "record_id": "TR-00001",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-05T11:00:00Z"
+      },
+      {
+        "record_id": "SP-00005",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-21T16:28:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What is in Atlas phase 1?",
+        "Was SMB onboarding included in the first Atlas release?"
+      ],
+      "required_concepts": [
+        "enterprise onboarding",
+        "SMB deferred",
+        "phase 1"
+      ],
+      "invalid_claims": [
+        "SMB is included in phase 1",
+        "Atlas supports all customer segments in the pilot"
+      ]
+    }
+  },
+  {
+    "id": "ATLAS-GM-002",
+    "scope": "ATLAS",
+    "category": "data_authority",
+    "status": "current",
+    "canonical_fact": "CRM remains authoritative for customer identity and onboarding status; Atlas owns orchestration rather than a competing customer master.",
+    "rationale": "This avoids duplicate identity ownership, reconciliation ambiguity and divergent client-facing status.",
+    "valid_from": "2026-01-05T12:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00013",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-16T13:29:00Z"
+      },
+      {
+        "record_id": "OL-00008",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-20T15:49:00Z"
+      },
+      {
+        "record_id": "CF-00001",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-05T14:00:00Z"
+      },
+      {
+        "record_id": "SP-00001",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-05T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Which system owns customer identity for Atlas?",
+        "Does Atlas create its own customer master?"
+      ],
+      "required_concepts": [
+        "CRM authoritative",
+        "customer identity",
+        "Atlas orchestration"
+      ],
+      "invalid_claims": [
+        "Atlas is the customer system of record",
+        "Atlas may create a local master when CRM lookup fails"
+      ]
+    }
+  },
+  {
+    "id": "ATLAS-GM-003",
+    "scope": "ATLAS",
+    "category": "dependency",
+    "status": "current",
+    "canonical_fact": "The Atlas pilot authenticates through Harbor's interim SSO bridge rather than waiting for Harbor's full migration.",
+    "rationale": "The bridge decouples the pilot schedule while keeping Atlas inside Harbor's identity-control boundary.",
+    "valid_from": "2026-01-05T12:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00003",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-06T15:14:00Z"
+      },
+      {
+        "record_id": "CF-00002",
+        "source": "confluence",
+        "type": "implementation_decision",
+        "timestamp": "2026-01-08T09:07:00Z"
+      },
+      {
+        "record_id": "SP-00001",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-05T12:00:00Z"
+      },
+      {
+        "record_id": "OD-00001",
+        "source": "onedrive",
+        "type": "implementation_spec",
+        "timestamp": "2026-01-05T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "How does the Atlas pilot authenticate?",
+        "Must Atlas wait for the complete Harbor migration?"
+      ],
+      "required_concepts": [
+        "Harbor",
+        "interim SSO bridge",
+        "pilot"
+      ],
+      "invalid_claims": [
+        "Atlas uses local credentials",
+        "Atlas waits for Harbor's full migration"
+      ]
+    }
+  },
+  {
+    "id": "ATLAS-GM-004",
+    "scope": "ATLAS",
+    "category": "exception_control",
+    "status": "current",
+    "canonical_fact": "High-risk Atlas onboarding exceptions require accountable human approval.",
+    "rationale": "Legal, security and contractual exceptions need durable judgment, rationale and audit evidence rather than fully automated resolution.",
+    "valid_from": "2026-01-12T12:14:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00049",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-02-19T09:06:00Z"
+      },
+      {
+        "record_id": "OL-00029",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-03-08T14:31:00Z"
+      },
+      {
+        "record_id": "CF-00003",
+        "source": "confluence",
+        "type": "anti_pattern",
+        "timestamp": "2026-01-12T12:14:00Z"
+      },
+      {
+        "record_id": "SP-00003",
+        "source": "sharepoint",
+        "type": "steering_decision",
+        "timestamp": "2026-01-13T10:14:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Can Atlas automatically approve high-risk exceptions?",
+        "What control applies to legal or contractual onboarding exceptions?"
+      ],
+      "required_concepts": [
+        "high-risk exceptions",
+        "human approval",
+        "audit evidence"
+      ],
+      "invalid_claims": [
+        "all exceptions are automatically approved",
+        "free-text notes count as approval"
+      ]
+    }
+  },
+  {
+    "id": "ATLAS-GM-005",
+    "scope": "ATLAS",
+    "category": "process_governance",
+    "status": "current",
+    "canonical_fact": "Atlas uses a mandatory enterprise stage taxonomy while allowing governed region-specific substeps.",
+    "rationale": "The design preserves comparable enterprise reporting without erasing legitimate regional process detail.",
+    "valid_from": "2026-01-16T15:21:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00025",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-27T09:03:00Z"
+      },
+      {
+        "record_id": "OL-00015",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-05T12:43:00Z"
+      },
+      {
+        "record_id": "CF-00004",
+        "source": "confluence",
+        "type": "dependency_note",
+        "timestamp": "2026-01-16T15:21:00Z"
+      },
+      {
+        "record_id": "OD-00004",
+        "source": "onedrive",
+        "type": "process_map",
+        "timestamp": "2026-01-20T14:21:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Can regions define their own Atlas stages?",
+        "How does Atlas balance global reporting with regional process?"
+      ],
+      "required_concepts": [
+        "common stage taxonomy",
+        "regional substeps",
+        "governed"
+      ],
+      "invalid_claims": [
+        "each region may redefine enterprise stages",
+        "regional variation is entirely prohibited"
+      ]
+    }
+  },
+  {
+    "id": "ATLAS-GM-006",
+    "scope": "ATLAS",
+    "category": "cross_project",
+    "status": "current",
+    "canonical_fact": "Atlas depends on Harbor for authentication and shares CRM identity-quality concerns with Nova; these are distinct dependencies with separate owners.",
+    "rationale": "Authentication readiness and customer-data quality can each affect Atlas, but one dependency's status does not resolve the other.",
+    "valid_from": "2026-01-05T12:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00003",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-06T15:14:00Z"
+      },
+      {
+        "record_id": "TR-00002",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-08T14:07:00Z"
+      },
+      {
+        "record_id": "SP-00001",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-05T12:00:00Z"
+      },
+      {
+        "record_id": "CF-00002",
+        "source": "confluence",
+        "type": "implementation_decision",
+        "timestamp": "2026-01-08T09:07:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What are Atlas's main cross-project dependencies?",
+        "Does resolving Harbor authentication also resolve Atlas CRM quality?"
+      ],
+      "required_concepts": [
+        "Harbor authentication",
+        "Nova CRM identity quality",
+        "separate dependencies"
+      ],
+      "invalid_claims": [
+        "Atlas has no cross-project dependencies",
+        "Harbor owns CRM data quality"
+      ]
+    }
+  }
+]

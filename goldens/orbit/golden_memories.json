@@ -1,0 +1,308 @@
+[
+  {
+    "id": "ORBIT-GM-001",
+    "scope": "ORBIT",
+    "category": "forecast_cadence",
+    "status": "current",
+    "canonical_fact": "Orbit uses a monthly rolling forecast instead of quarterly-only planning.",
+    "rationale": "The operating model updates assumptions more frequently while retaining version and rationale history.",
+    "valid_from": "2026-01-05T09:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00697",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-05T09:00:00Z"
+      },
+      {
+        "record_id": "OL-00298",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-05T10:00:00Z"
+      },
+      {
+        "record_id": "TR-00199",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-05T11:00:00Z"
+      },
+      {
+        "record_id": "CF-00175",
+        "source": "confluence",
+        "type": "anti_pattern",
+        "timestamp": "2026-01-14T12:14:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What forecast cadence does Orbit use?",
+        "Is Orbit limited to quarterly planning?"
+      ],
+      "required_concepts": [
+        "monthly rolling forecast",
+        "replaces quarterly-only",
+        "version history"
+      ],
+      "invalid_claims": [
+        "Orbit forecasts only quarterly",
+        "monthly updates erase prior versions"
+      ]
+    }
+  },
+  {
+    "id": "ORBIT-GM-002",
+    "scope": "ORBIT",
+    "category": "financial_authority",
+    "status": "current",
+    "canonical_fact": "ERP actuals remain authoritative in Orbit; manual spreadsheet adjustments are governed exceptions.",
+    "rationale": "Orbit may transform and explain actuals but cannot establish a competing financial truth.",
+    "valid_from": "2026-01-09T14:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00733",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-02-16T13:32:00Z"
+      },
+      {
+        "record_id": "OL-00319",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-03-03T09:37:00Z"
+      },
+      {
+        "record_id": "TR-00200",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-09T14:07:00Z"
+      },
+      {
+        "record_id": "CF-00176",
+        "source": "confluence",
+        "type": "dependency_note",
+        "timestamp": "2026-01-19T15:21:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What is authoritative for Orbit actuals?",
+        "Can a spreadsheet override ERP actuals by default?"
+      ],
+      "required_concepts": [
+        "ERP actuals",
+        "authoritative",
+        "manual adjustments are exceptions"
+      ],
+      "invalid_claims": [
+        "Orbit is the source of record for actuals",
+        "spreadsheet adjustments automatically replace ERP"
+      ]
+    }
+  },
+  {
+    "id": "ORBIT-GM-003",
+    "scope": "ORBIT",
+    "category": "ai_boundary",
+    "status": "current",
+    "canonical_fact": "AI may draft Orbit variance narratives but cannot change forecasts.",
+    "rationale": "Narrative generation is an assistive use case; finance judgment remains responsible for forecast values and approved explanations.",
+    "valid_from": "2026-01-05T14:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00745",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-03-02T09:06:00Z"
+      },
+      {
+        "record_id": "OL-00326",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-03-23T14:31:00Z"
+      },
+      {
+        "record_id": "TR-00202",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-17T12:21:00Z"
+      },
+      {
+        "record_id": "CF-00173",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-05T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Can Orbit AI change forecast values?",
+        "What may AI do in Orbit?"
+      ],
+      "required_concepts": [
+        "draft variance narratives",
+        "cannot change forecasts",
+        "human review"
+      ],
+      "invalid_claims": [
+        "AI autonomously updates forecasts",
+        "AI narratives are automatically approved"
+      ]
+    }
+  },
+  {
+    "id": "ORBIT-GM-004",
+    "scope": "ORBIT",
+    "category": "scenario_rollout",
+    "status": "current",
+    "canonical_fact": "Orbit scenario planning is phase 1 for finance leadership and phase 2 for broader business units.",
+    "rationale": "A controlled cohort validates scenario semantics and governance before wider rollout.",
+    "valid_from": "2026-01-09T09:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00721",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-02-02T09:03:00Z"
+      },
+      {
+        "record_id": "OL-00312",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-12T12:43:00Z"
+      },
+      {
+        "record_id": "TR-00203",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-21T15:28:00Z"
+      },
+      {
+        "record_id": "CF-00174",
+        "source": "confluence",
+        "type": "implementation_decision",
+        "timestamp": "2026-01-09T09:07:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Who receives Orbit scenario planning in phase 1?",
+        "Are all business units included immediately?"
+      ],
+      "required_concepts": [
+        "finance leadership",
+        "phase 1",
+        "business units phase 2"
+      ],
+      "invalid_claims": [
+        "all business units are in phase 1",
+        "scenario planning has no staged rollout"
+      ]
+    }
+  },
+  {
+    "id": "ORBIT-GM-005",
+    "scope": "ORBIT",
+    "category": "dependency",
+    "status": "current",
+    "canonical_fact": "Orbit shares analytical-platform compute and batch windows with Pulse.",
+    "rationale": "Peak planning and store-processing workloads can contend, so capacity and service priorities require explicit coordination.",
+    "valid_from": "2026-01-05T12:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00699",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-07T15:14:00Z"
+      },
+      {
+        "record_id": "OL-00305",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-24T15:49:00Z"
+      },
+      {
+        "record_id": "TR-00201",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-13T09:14:00Z"
+      },
+      {
+        "record_id": "SP-00167",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-05T12:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Which project shares platform capacity with Orbit?",
+        "Why does Orbit coordinate batch windows?"
+      ],
+      "required_concepts": [
+        "Pulse",
+        "shared platform",
+        "compute and batch windows"
+      ],
+      "invalid_claims": [
+        "Orbit has isolated unlimited compute",
+        "Harbor schedules Orbit forecasts"
+      ]
+    }
+  },
+  {
+    "id": "ORBIT-GM-006",
+    "scope": "ORBIT",
+    "category": "risk",
+    "status": "current",
+    "canonical_fact": "Platform-capacity contention and manual-adjustment governance are material Orbit risks.",
+    "rationale": "Capacity can delay forecast processing, while weak adjustment controls can obscure who changed a forecast and why.",
+    "valid_from": "2026-01-06T12:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00698",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-06T12:07:00Z"
+      },
+      {
+        "record_id": "OL-00299",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-07T13:07:00Z"
+      },
+      {
+        "record_id": "TR-00203",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-21T15:28:00Z"
+      },
+      {
+        "record_id": "OD-00134",
+        "source": "onedrive",
+        "type": "test_plan",
+        "timestamp": "2026-01-17T11:14:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What operational and governance risks matter to Orbit?",
+        "Why must manual forecast adjustments be traceable?"
+      ],
+      "required_concepts": [
+        "platform capacity contention",
+        "manual adjustment governance",
+        "traceability"
+      ],
+      "invalid_claims": [
+        "manual adjustments need no owner",
+        "capacity cannot affect Orbit"
+      ]
+    }
+  }
+]

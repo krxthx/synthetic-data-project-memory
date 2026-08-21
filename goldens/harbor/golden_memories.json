@@ -1,0 +1,308 @@
+[
+  {
+    "id": "HARBOR-GM-001",
+    "scope": "HARBOR",
+    "category": "migration",
+    "status": "current",
+    "canonical_fact": "Harbor migrates applications in waves based on criticality and provisioning readiness.",
+    "rationale": "A single date-driven cutover would ignore large differences in legacy integration, support ownership and recovery options.",
+    "valid_from": "2026-01-05T09:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00496",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-05T09:00:00Z"
+      },
+      {
+        "record_id": "OL-00212",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-05T10:00:00Z"
+      },
+      {
+        "record_id": "TR-00142",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-05T11:00:00Z"
+      },
+      {
+        "record_id": "CF-00125",
+        "source": "confluence",
+        "type": "anti_pattern",
+        "timestamp": "2026-01-11T12:14:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "How are Harbor migration waves sequenced?",
+        "Does Harbor use one cutover date for every application?"
+      ],
+      "required_concepts": [
+        "migration waves",
+        "criticality",
+        "provisioning readiness"
+      ],
+      "invalid_claims": [
+        "all applications migrate together",
+        "schedule alone determines readiness"
+      ]
+    }
+  },
+  {
+    "id": "HARBOR-GM-002",
+    "scope": "HARBOR",
+    "category": "access_model",
+    "status": "current",
+    "canonical_fact": "Role-based access control is Harbor's baseline, with documented and governed exceptions.",
+    "rationale": "Exceptions require ownership, rationale, compensating controls and review rather than becoming unofficial permanent roles.",
+    "valid_from": "2026-01-07T14:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00532",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-02-03T13:32:00Z"
+      },
+      {
+        "record_id": "OL-00233",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-14T09:37:00Z"
+      },
+      {
+        "record_id": "TR-00143",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-07T14:07:00Z"
+      },
+      {
+        "record_id": "CF-00126",
+        "source": "confluence",
+        "type": "dependency_note",
+        "timestamp": "2026-01-15T15:21:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What is Harbor's baseline access model?",
+        "Are RBAC exceptions allowed without governance?"
+      ],
+      "required_concepts": [
+        "RBAC baseline",
+        "governed exceptions",
+        "review"
+      ],
+      "invalid_claims": [
+        "all exceptions are prohibited",
+        "local teams may create permanent unofficial roles"
+      ]
+    }
+  },
+  {
+    "id": "HARBOR-GM-003",
+    "scope": "HARBOR",
+    "category": "atlas_bridge",
+    "status": "current",
+    "canonical_fact": "Harbor provides an interim SSO bridge for the Atlas pilot.",
+    "rationale": "The bridge lets Atlas proceed while preserving Harbor authentication controls and a retirement path.",
+    "valid_from": "2026-01-10T09:14:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00508",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-14T13:29:00Z"
+      },
+      {
+        "record_id": "OL-00219",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-18T15:49:00Z"
+      },
+      {
+        "record_id": "TR-00144",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-10T09:14:00Z"
+      },
+      {
+        "record_id": "CF-00127",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-18T10:28:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What does Harbor provide to the Atlas pilot?",
+        "Does Atlas use credentials outside Harbor?"
+      ],
+      "required_concepts": [
+        "interim SSO bridge",
+        "Atlas pilot",
+        "Harbor controls"
+      ],
+      "invalid_claims": [
+        "Harbor has no Atlas dependency",
+        "Atlas uses unmanaged local credentials"
+      ]
+    }
+  },
+  {
+    "id": "HARBOR-GM-004",
+    "scope": "HARBOR",
+    "category": "legacy_apps",
+    "status": "current",
+    "canonical_fact": "Legacy applications without SCIM are not forced into Harbor phase 1.",
+    "rationale": "Forcing unsupported provisioning would hide manual revocation risk and operational cost; these applications need later waves or controlled interim procedures.",
+    "valid_from": "2026-01-05T14:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00544",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-02-13T09:06:00Z"
+      },
+      {
+        "record_id": "OL-00240",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-28T14:31:00Z"
+      },
+      {
+        "record_id": "TR-00145",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-13T12:21:00Z"
+      },
+      {
+        "record_id": "CF-00123",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-05T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Are non-SCIM applications mandatory in Harbor phase 1?",
+        "How does Harbor treat legacy provisioning gaps?"
+      ],
+      "required_concepts": [
+        "legacy apps",
+        "without SCIM",
+        "not forced into phase 1"
+      ],
+      "invalid_claims": [
+        "every legacy app must migrate in phase 1",
+        "manual provisioning is equivalent to SCIM"
+      ]
+    }
+  },
+  {
+    "id": "HARBOR-GM-005",
+    "scope": "HARBOR",
+    "category": "privileged_access",
+    "status": "current",
+    "canonical_fact": "Privileged accounts require step-up controls before Harbor migration.",
+    "rationale": "Administrative identities have a materially higher blast radius and need stronger assurance than a successful standard login.",
+    "valid_from": "2026-01-08T09:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00520",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-24T09:03:00Z"
+      },
+      {
+        "record_id": "OL-00226",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-01T12:43:00Z"
+      },
+      {
+        "record_id": "TR-00146",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-16T15:28:00Z"
+      },
+      {
+        "record_id": "CF-00124",
+        "source": "confluence",
+        "type": "implementation_decision",
+        "timestamp": "2026-01-08T09:07:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What must happen before privileged accounts migrate?",
+        "Are standard login controls sufficient for Harbor administrators?"
+      ],
+      "required_concepts": [
+        "privileged accounts",
+        "step-up controls",
+        "before migration"
+      ],
+      "invalid_claims": [
+        "privileged access can migrate without stronger controls",
+        "standard authentication is always sufficient"
+      ]
+    }
+  },
+  {
+    "id": "HARBOR-GM-006",
+    "scope": "HARBOR",
+    "category": "cross_project",
+    "status": "current",
+    "canonical_fact": "Harbor supports Atlas pilot authentication and Nova account-team authorization mappings as separate cross-project responsibilities.",
+    "rationale": "The two dependencies serve different consumers and must retain separate owners, timelines and acceptance evidence.",
+    "valid_from": "2026-01-05T12:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00498",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-06T15:14:00Z"
+      },
+      {
+        "record_id": "TR-00143",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-07T14:07:00Z"
+      },
+      {
+        "record_id": "SP-00119",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-05T12:00:00Z"
+      },
+      {
+        "record_id": "CF-00123",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-05T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Which projects depend on Harbor?",
+        "Are Harbor's Atlas and Nova dependencies the same capability?"
+      ],
+      "required_concepts": [
+        "Atlas authentication",
+        "Nova authorization mappings",
+        "separate responsibilities"
+      ],
+      "invalid_claims": [
+        "Harbor supports only Atlas",
+        "Atlas and Nova use the same dependency contract"
+      ]
+    }
+  }
+]

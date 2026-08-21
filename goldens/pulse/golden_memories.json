@@ -1,0 +1,308 @@
+[
+  {
+    "id": "PULSE-GM-001",
+    "scope": "PULSE",
+    "category": "scope",
+    "status": "current",
+    "canonical_fact": "Pulse phase 1 alerts target store operations and explicitly exclude employee-level scoring.",
+    "rationale": "The telemetry and governance model were designed for operational conditions, not individual workforce judgments.",
+    "valid_from": "2026-01-05T09:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00177",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-05T09:00:00Z"
+      },
+      {
+        "record_id": "OL-00076",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-05T10:00:00Z"
+      },
+      {
+        "record_id": "TR-00051",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-05T11:00:00Z"
+      },
+      {
+        "record_id": "CF-00045",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-05T14:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Does Pulse score individual employees?",
+        "What does Pulse phase 1 alert on?"
+      ],
+      "required_concepts": [
+        "store operations",
+        "not employee-level scoring",
+        "phase 1"
+      ],
+      "invalid_claims": [
+        "Pulse ranks employees",
+        "employee performance scoring is a phase-1 feature"
+      ]
+    }
+  },
+  {
+    "id": "PULSE-GM-002",
+    "scope": "PULSE",
+    "category": "latency",
+    "status": "current",
+    "canonical_fact": "Pulse accepts fifteen-minute analytical latency in phase 1 and defers real-time streaming.",
+    "rationale": "Predictable and explainable alerts on inconsistent telemetry were prioritized over sub-second processing.",
+    "valid_from": "2026-01-08T14:07:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00213",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-02-13T13:32:00Z"
+      },
+      {
+        "record_id": "OL-00097",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-03-01T09:37:00Z"
+      },
+      {
+        "record_id": "TR-00052",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-08T14:07:00Z"
+      },
+      {
+        "record_id": "CF-00046",
+        "source": "confluence",
+        "type": "implementation_decision",
+        "timestamp": "2026-01-09T09:07:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Is Pulse real time?",
+        "What analytical latency was accepted for Pulse?"
+      ],
+      "required_concepts": [
+        "15-minute latency",
+        "real-time deferred",
+        "analytical"
+      ],
+      "invalid_claims": [
+        "Pulse requires real-time streaming",
+        "Pulse guarantees sub-second alerts"
+      ]
+    }
+  },
+  {
+    "id": "PULSE-GM-003",
+    "scope": "PULSE",
+    "category": "metric_governance",
+    "status": "current",
+    "canonical_fact": "Enterprise KPI definitions override legacy regional scorecard definitions in Pulse.",
+    "rationale": "A shared semantic layer is necessary for comparable reporting; regions may add context but cannot silently change enterprise calculations.",
+    "valid_from": "2026-01-20T15:28:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00201",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-31T09:03:00Z"
+      },
+      {
+        "record_id": "OL-00090",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-02-10T12:43:00Z"
+      },
+      {
+        "record_id": "TR-00055",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-20T15:28:00Z"
+      },
+      {
+        "record_id": "CF-00049",
+        "source": "confluence",
+        "type": "architecture_decision",
+        "timestamp": "2026-01-22T10:28:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Which KPI definition wins when Pulse and a regional scorecard disagree?",
+        "May a region redefine a Pulse enterprise KPI?"
+      ],
+      "required_concepts": [
+        "enterprise KPI definitions",
+        "override regional scorecards",
+        "comparable reporting"
+      ],
+      "invalid_claims": [
+        "regional scorecards are authoritative",
+        "each region may change KPI denominators"
+      ]
+    }
+  },
+  {
+    "id": "PULSE-GM-004",
+    "scope": "PULSE",
+    "category": "rollout",
+    "status": "current",
+    "canonical_fact": "The Midwest region is Pulse's first production pilot.",
+    "rationale": "Midwest provides a controlled proving ground; pilot success still requires evidence before broader rollout.",
+    "valid_from": "2026-01-12T09:14:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00189",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-18T13:29:00Z"
+      },
+      {
+        "record_id": "OL-00083",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-23T15:49:00Z"
+      },
+      {
+        "record_id": "TR-00053",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-12T09:14:00Z"
+      },
+      {
+        "record_id": "CF-00047",
+        "source": "confluence",
+        "type": "anti_pattern",
+        "timestamp": "2026-01-13T12:14:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Where is the first Pulse production pilot?",
+        "Did Pulse launch to every region at once?"
+      ],
+      "required_concepts": [
+        "Midwest",
+        "first production pilot",
+        "controlled rollout"
+      ],
+      "invalid_claims": [
+        "Pulse began with a global rollout",
+        "Northeast is the first pilot"
+      ]
+    }
+  },
+  {
+    "id": "PULSE-GM-005",
+    "scope": "PULSE",
+    "category": "dependency",
+    "status": "current",
+    "canonical_fact": "Pulse depends on shared analytical-platform capacity and batch windows coordinated with Orbit.",
+    "rationale": "Competing peak workloads require explicit scheduling and degradation rules rather than assuming unlimited capacity.",
+    "valid_from": "2026-01-05T12:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00179",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-07T15:14:00Z"
+      },
+      {
+        "record_id": "TR-00054",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-16T12:21:00Z"
+      },
+      {
+        "record_id": "SP-00043",
+        "source": "sharepoint",
+        "type": "business_announcement",
+        "timestamp": "2026-01-05T12:00:00Z"
+      },
+      {
+        "record_id": "OD-00034",
+        "source": "onedrive",
+        "type": "implementation_spec",
+        "timestamp": "2026-01-05T13:00:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "Which project shares platform capacity with Pulse?",
+        "Why must Pulse coordinate batch windows?"
+      ],
+      "required_concepts": [
+        "Orbit",
+        "shared analytical platform",
+        "batch capacity"
+      ],
+      "invalid_claims": [
+        "Pulse has dedicated unlimited compute",
+        "Atlas owns Pulse batch capacity"
+      ]
+    }
+  },
+  {
+    "id": "PULSE-GM-006",
+    "scope": "PULSE",
+    "category": "risk",
+    "status": "current",
+    "canonical_fact": "Missing telemetry and high false-positive rates are material Pulse operational risks.",
+    "rationale": "Either condition can make alerts misleading or unusable, so freshness, source quality and alert precision require explicit acceptance evidence.",
+    "valid_from": "2026-01-05T11:00:00Z",
+    "valid_to": null,
+    "evidence": [
+      {
+        "record_id": "TM-00178",
+        "source": "teams",
+        "type": "message",
+        "timestamp": "2026-01-06T12:07:00Z"
+      },
+      {
+        "record_id": "OL-00077",
+        "source": "outlook",
+        "type": "email",
+        "timestamp": "2026-01-07T13:07:00Z"
+      },
+      {
+        "record_id": "TR-00051",
+        "source": "transcript",
+        "type": "calendar_recording_transcript",
+        "timestamp": "2026-01-05T11:00:00Z"
+      },
+      {
+        "record_id": "OD-00036",
+        "source": "onedrive",
+        "type": "test_plan",
+        "timestamp": "2026-01-17T11:14:00Z"
+      }
+    ],
+    "evaluation": {
+      "questions": [
+        "What data-quality risks can undermine Pulse alerts?",
+        "Why is alert precision part of Pulse readiness?"
+      ],
+      "required_concepts": [
+        "missing telemetry",
+        "false positives",
+        "operational risk"
+      ],
+      "invalid_claims": [
+        "alert accuracy is not a release concern",
+        "stale telemetry may be shown as current without warning"
+      ]
+    }
+  }
+]
