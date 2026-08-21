@@ -26,7 +26,7 @@ Nova combines CRM signals, approved meeting evidence, human review, recommendati
 `records.jsonl` is the canonical normalized corpus. The six directly readable source-specific files used to rebuild it are in `sources/`.
 
 ## Artifacts
-`artifacts/` contains 17 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster and casebook artifacts.
+`artifacts/` contains 18 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster, casebook and contractual-scope artifacts.
 
 ## People
 See `../people.json` for member roles, SMEs, responsibilities and contribution history.

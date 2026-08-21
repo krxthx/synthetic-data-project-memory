@@ -30,6 +30,7 @@ A dense synthetic enterprise corpus for testing long-term organizational and pro
 - IT policies covering acceptable use, endpoints, remote access, identity, privileged access, data classification, retention and generative AI.
 - Administration policies covering procurement, vendors, travel, expense, workplace access, visitors and business continuity.
 - A structured policy catalog, governance register and 27 normalized policy announcements, guidance messages and approved clarifications.
+- Five project statements of work in DOCX format.
 
 The dataset is synthetic. Its purpose is to test ingestion, temporal reasoning, provenance, conflict resolution, SME discovery, and multi-file long-term memory generation.
 

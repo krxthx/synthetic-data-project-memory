@@ -37,9 +37,17 @@ ARTIFACTS = {
     "solution_design_specification.docx",
     "steering_committee_decision_pack.pdf",
     "steering_committee_pack.pdf",
+    "statement_of_work.docx",
     "uat_and_acceptance_plan.docx",
 }
 GOLDEN_COUNTS = {"ATLAS": 6, "PULSE": 6, "NOVA": 6, "HARBOR": 6, "ORBIT": 6, "ORGANIZATION": 9}
+SOWS = {
+    "atlas": ("MG-ATLAS-SOW-001", "Cedar Bridge Delivery Ltd.", "Lena Iyer"),
+    "pulse": ("MG-PULSE-SOW-001", "Northlake Analytics Ltd.", "Leah Pillai"),
+    "nova": ("MG-NOVA-SOW-001", "Redwood Signal Systems Ltd.", "Leah Mendes"),
+    "harbor": ("MG-HARBOR-SOW-001", "Greyhaven Identity Services Ltd.", "Leo Singh"),
+    "orbit": ("MG-ORBIT-SOW-001", "Blue Cedar Finance Systems Ltd.", "Omar White"),
+}
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -141,6 +149,31 @@ def validate_organization(people: list[dict]) -> list[dict]:
     return records
 
 
+def validate_sows(people: list[dict]) -> None:
+    people_by_name = {person["name"]: person for person in people}
+    required_sections = {
+        "1. Background and objectives",
+        "2. In-scope services",
+        "3. Deliverables and milestones",
+        "4. Responsibilities",
+        "5. Assumptions and dependencies",
+        "6. Out of scope",
+        "8. Commercial and change control",
+        "9. Exit and transition",
+    }
+    for project, (sow_id, supplier, owner) in SOWS.items():
+        assert owner in people_by_name, f"{sow_id}: unknown Meridian owner"
+        sow_path = DATA / project / "artifacts" / "statement_of_work.docx"
+        with zipfile.ZipFile(sow_path) as document:
+            xml = ElementTree.fromstring(document.read("word/document.xml"))
+        content = " ".join(node.text for node in xml.iter() if node.text)
+        assert len(re.findall(r"\b\w+\b", content)) >= 650, f"{sow_id}: SOW is too sparse"
+        assert sow_id in content, f"{sow_id}: document ID mismatch"
+        assert supplier in content, f"{sow_id}: supplier mismatch"
+        assert owner in content, f"{sow_id}: owner mismatch"
+        assert all(section in content for section in required_sections), f"{sow_id}: required section missing"
+
+
 def validate_golden_memories(records_by_scope: dict[str, list[dict]]) -> None:
     combined = []
     all_golden_ids = set()
@@ -206,6 +239,7 @@ def main() -> None:
     assert len(people) == 93, f"expected 93 people, found {len(people)}"
     assert len({person["id"] for person in people}) == 93, "duplicate people IDs"
     organization_records = validate_organization(people)
+    validate_sows(people)
     records_by_scope["ORGANIZATION"] = organization_records
     organization_ids = {record["id"] for record in organization_records}
     assert not all_ids.intersection(organization_ids), "organization IDs overlap project IDs"
@@ -221,6 +255,7 @@ def main() -> None:
     assert people, "people directory is empty"
     assert total == 2000, f"expected 2000 total records, found {total}"
     print(f"organization: {len(organization_records)} records, 9 policies")
+    print("statements of work: 5")
     print(f"golden memories: {sum(GOLDEN_COUNTS.values())} facts and 78 questions across {len(GOLDEN_COUNTS)} scopes")
     print(f"total: {total + len(organization_records)} records, {len(people)} people")
 

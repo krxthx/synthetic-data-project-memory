@@ -25,7 +25,7 @@ Pulse covers store telemetry, enterprise KPI definitions, alert thresholds, data
 `records.jsonl` is the canonical normalized corpus. The six directly readable source-specific files used to rebuild it are in `sources/`.
 
 ## Artifacts
-`artifacts/` contains 17 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster and casebook artifacts.
+`artifacts/` contains 18 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster, casebook and contractual-scope artifacts.
 
 ## People
 See `../people.json` for roles, SME areas, responsibilities and contribution history.

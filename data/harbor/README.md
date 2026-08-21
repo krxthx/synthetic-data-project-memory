@@ -27,7 +27,7 @@ Harbor covers SSO migration, RBAC, SCIM gaps, privileged access, directory clean
 `records.jsonl` is the canonical normalized corpus. The six directly readable source-specific files used to rebuild it are in `sources/`.
 
 ## Artifacts
-`artifacts/` contains 17 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster and casebook artifacts.
+`artifacts/` contains 18 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster, casebook and contractual-scope artifacts.
 
 ## People
 See `../people.json` for project members, SMEs, responsibilities and what they built.

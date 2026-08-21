@@ -30,4 +30,4 @@ Atlas contains business, delivery and architecture history around CRM identity, 
 The organization-wide `../people.json` file contains member roles, project membership, SME areas, responsibilities, and what each person has built or contributed.
 
 ## Artifacts
-`artifacts/` contains 18 architecture views, decision/risk registers, project rosters, casebooks and rich project documents intended to overlap with the normalized source evidence.
+`artifacts/` contains 19 architecture views, decision/risk registers, project rosters, casebooks, contractual delivery scope and rich project documents intended to overlap with the normalized source evidence.
