@@ -1,43 +1,28 @@
 # Orbit Financial Planning
 
-Orbit replaces fragmented planning spreadsheets with a governed rolling-forecast and scenario-planning experience for Contoso Finance. The project connects authoritative ERP actuals to a shared analytical platform while keeping forecast ownership and approval with finance users.
+**Organization:** Meridian Group  
+**Project ID:** ORBIT  
+**Domain:** Finance  
+**Records:** 340  
+**Core team:** 15 members plus shared enterprise SMEs
 
-## Scope
+## Purpose
+Replace fragmented planning spreadsheets with rolling forecast and scenario planning.
 
-- Domain: Finance
-- Core team: 15 project members, plus shared enterprise specialists
-- Dataset records: 340
-- Primary outcome: consistent monthly rolling forecasts, scenario planning, and traceable variance narratives
+## Memory storyline
+Orbit covers ERP actuals, monthly rolling forecasting, scenario planning, finance governance, manual adjustments and shared-platform constraints. The project includes leadership and business-unit tradeoffs as well as implementation and QA detail.
 
-## Key project decisions
-
+## Key decisions
 - Monthly rolling forecast replaces quarterly-only planning.
-- ERP actuals remain authoritative. Manual spreadsheet adjustments are exceptions.
-- Orbit uses the shared analytical platform that also supports Pulse.
+- ERP actuals remain authoritative.
 - AI may draft variance narratives but cannot change forecasts.
-- Scenario planning is phase 1 for finance leadership and phase 2 for business units.
+- Scenario planning starts with finance leadership before broader business-unit rollout.
 
-## Important dependencies
+## Dependency
+- **Pulse:** shared analytical-platform compute and batch windows.
 
-Orbit shares analytical platform capacity, compute windows, and governance with Pulse. These shared constraints create realistic scheduling and prioritization discussions across otherwise separate projects.
+## Sources
+`records.jsonl.gz` preserves the original Teams, Outlook, transcript, SharePoint, OneDrive and Confluence source identity.
 
-## People and expertise
-
-The project includes leadership, program and project management, product, BAs, architects, engineering and data specialists, QA, change management, client roles, and shared enterprise SMEs. `people.json` and `artifacts/project_roster.csv` document expertise, responsibilities, and what each person has built.
-
-## Synthetic data sources
-
-- `teams.jsonl`: forecasting discussions, platform constraints, business rules, and decision updates
-- `outlook.jsonl`: leadership rationale, milestone communication, client feedback, and escalations
-- `transcript.jsonl`: steering committee and finance working-session transcripts
-- `sharepoint.jsonl`: business announcements, status reports, steering decisions, and client updates
-- `onedrive.jsonl`: implementation specs, test plans, working notes, and process maps
-- `confluence.jsonl`: architecture decisions, implementation decisions, anti-patterns, and dependency notes
-
-## Rich artifacts
-
-The `artifacts/` folder includes a steering committee PDF, implementation DOCX, project roster CSV, risk register CSV, and architecture diagram. These artifacts intentionally repeat and evolve information already present in the normalized source records.
-
-## Memory challenges represented
-
-Orbit includes authoritative-source rules, manual-adjustment exceptions, finance governance, AI scope boundaries, shared-platform contention, changing scenario-planning scope, point-in-time status snapshots, and business rationale distributed across leadership conversations and implementation artifacts.
+## People
+See `../people.json.gz` for roles, SME areas, responsibilities and contribution history.

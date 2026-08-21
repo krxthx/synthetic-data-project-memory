@@ -1,43 +1,33 @@
 # Atlas Customer Onboarding
 
-Atlas modernizes Contoso's enterprise customer onboarding journey from signed deal through production handoff. The project focuses on removing fragmented regional processes while preserving controlled exception handling and clear ownership of customer identity.
+**Organization:** Meridian Group  
+**Project ID:** ATLAS  
+**Domain:** Customer Operations  
+**Records:** 420  
+**Core team:** 17 members plus shared enterprise SMEs
 
-## Scope
+## Purpose
+Modernize enterprise customer onboarding from signed deal to production handoff.
 
-- Domain: Customer Operations
-- Core team: 17 project members, plus shared enterprise specialists
-- Dataset records: 420
-- Primary outcome: one traceable onboarding lifecycle with common stage definitions and governed regional variation
+## Memory storyline
+Atlas contains business, delivery and architecture history around CRM identity, a governed onboarding stage model, exception handling, regional process variance, and an interim Harbor SSO dependency. The corpus intentionally contains repeated facts, corrections, superseded assumptions, client feedback and cross-project references.
 
-## Key project decisions
-
-- Phase 1 covers enterprise onboarding. SMB onboarding is deferred.
+## Key decisions
 - CRM remains authoritative for customer identity and onboarding status.
+- Enterprise onboarding is phase 1; SMB onboarding is deferred.
+- The pilot uses Harbor's interim SSO bridge rather than waiting for the full Harbor migration.
 - High-risk onboarding exceptions require human approval.
-- A common onboarding stage taxonomy is mandatory, with region-specific substeps allowed.
-- Atlas uses an interim Harbor SSO bridge for the pilot instead of waiting for the full Harbor migration.
+- Regions may add governed substeps under a common enterprise stage taxonomy.
 
-## Important dependencies
+## Dependencies
+- **Harbor:** interim SSO bridge.
+- **Nova:** shared CRM identity-quality concerns.
 
-Atlas depends on Harbor for the interim SSO bridge and shares CRM data-quality concerns with Nova. These dependencies appear across Teams conversations, steering transcripts, Outlook threads, ADRs, and implementation specifications.
+## Sources
+`records.jsonl.gz` is the canonical normalized corpus. Every record retains its original `source` value: Teams, Outlook, calendar transcript, SharePoint, OneDrive or Confluence.
 
-## People and expertise
+## People
+The organization-wide `../people.json.gz` directory contains member roles, project membership, SME areas, responsibilities, and what each person has built or contributed.
 
-The project includes business and executive ownership, program and project management, product, business analysis, architecture, engineering, QA, change management, client roles, and shared enterprise SMEs. `people.json` and `artifacts/project_roster.csv` describe roles, expertise, responsibilities, and what each member has built.
-
-## Synthetic data sources
-
-- `teams.jsonl`: working conversations, risks, corrections, SME requests, and decision updates
-- `outlook.jsonl`: leadership, client, milestone, and escalation threads
-- `transcript.jsonl`: calendar recording transcripts for steering committees and working sessions
-- `sharepoint.jsonl`: business announcements, status reports, steering decisions, and client updates
-- `onedrive.jsonl`: implementation specs, working notes, test plans, and process maps
-- `confluence.jsonl`: ADRs, implementation decisions, anti-patterns, and dependency notes
-
-## Rich artifacts
-
-The `artifacts/` folder includes a steering committee PDF, implementation DOCX, risk register CSV, project roster CSV, and architecture diagram. These artifacts intentionally overlap with the normalized records so a memory compiler can reconcile duplicate, stale, and superseded information.
-
-## Memory challenges represented
-
-Atlas contains superseded assumptions, cross-project dependencies, business rationale, client feedback, SME ownership, architecture history, point-in-time status reports, exception policies, and decisions whose rationale is distributed across multiple sources.
+## Artifacts
+`artifacts/` contains architecture views, decision/risk registers and rich project documents intended to overlap with the normalized source evidence.
