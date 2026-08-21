@@ -1,94 +1,18 @@
 {
-  "organization": "Contoso",
+  "organization": "Meridian Group",
   "timeline": {
     "start": "2026-01-05",
     "end": "2026-06-19"
   },
   "projects": [
-    {
-      "id": "ATLAS",
-      "name": "Atlas Customer Onboarding",
-      "domain": "Customer Operations",
-      "goal": "Modernize enterprise customer onboarding from signed deal to production handoff.",
-      "members": 17,
-      "target": 420,
-      "themes": [
-        "CRM identity",
-        "onboarding stage model",
-        "exception handling",
-        "Harbor SSO dependency",
-        "regional process variance"
-      ]
-    },
-    {
-      "id": "PULSE",
-      "name": "Pulse Store Operations Intelligence",
-      "domain": "Retail Operations",
-      "goal": "Create a unified operational intelligence and alerting layer for regional stores.",
-      "members": 14,
-      "target": 360,
-      "themes": [
-        "store telemetry",
-        "alert thresholds",
-        "regional KPI definitions",
-        "data quality",
-        "shared data platform capacity"
-      ]
-    },
-    {
-      "id": "NOVA",
-      "name": "Nova Sales Opportunity Intelligence",
-      "domain": "Sales",
-      "goal": "Assist strategic account teams with evidence-backed opportunity recommendations.",
-      "members": 16,
-      "target": 400,
-      "themes": [
-        "CRM signals",
-        "meeting evidence",
-        "recommendation explainability",
-        "human review",
-        "account permissions"
-      ]
-    },
-    {
-      "id": "HARBOR",
-      "name": "Harbor Identity Modernization",
-      "domain": "Cybersecurity",
-      "goal": "Modernize enterprise identity, provisioning and access governance.",
-      "members": 19,
-      "target": 480,
-      "themes": [
-        "SSO migration",
-        "RBAC",
-        "SCIM gaps",
-        "privileged access",
-        "Atlas interim SSO"
-      ]
-    },
-    {
-      "id": "ORBIT",
-      "name": "Orbit Financial Planning",
-      "domain": "Finance",
-      "goal": "Replace fragmented planning spreadsheets with rolling forecast and scenario planning.",
-      "members": 15,
-      "target": 340,
-      "themes": [
-        "ERP actuals",
-        "rolling forecast",
-        "scenario planning",
-        "shared data platform",
-        "business-unit template variance"
-      ]
-    }
+    {"id":"ATLAS","name":"Atlas Customer Onboarding","domain":"Customer Operations","goal":"Modernize enterprise customer onboarding from signed deal to production handoff.","members":17,"themes":["CRM identity","onboarding stage model","exception handling","Harbor SSO dependency","regional process variance"]},
+    {"id":"PULSE","name":"Pulse Store Operations Intelligence","domain":"Retail Operations","goal":"Create a unified operational intelligence and alerting layer for regional stores.","members":14,"themes":["store telemetry","alert thresholds","regional KPI definitions","data quality","shared data platform capacity"]},
+    {"id":"NOVA","name":"Nova Sales Opportunity Intelligence","domain":"Sales","goal":"Assist strategic account teams with evidence-backed opportunity recommendations.","members":16,"themes":["CRM signals","meeting evidence","recommendation explainability","human review","account permissions"]},
+    {"id":"HARBOR","name":"Harbor Identity Modernization","domain":"Cybersecurity","goal":"Modernize enterprise identity, provisioning and access governance.","members":19,"themes":["SSO migration","RBAC","SCIM gaps","privileged access","Atlas interim SSO"]},
+    {"id":"ORBIT","name":"Orbit Financial Planning","domain":"Finance","goal":"Replace fragmented planning spreadsheets with rolling forecast and scenario planning.","members":15,"themes":["ERP actuals","rolling forecast","scenario planning","shared data platform","business-unit template variance"]}
   ],
-  "record_counts": {
-    "ATLAS": 420,
-    "PULSE": 360,
-    "NOVA": 400,
-    "HARBOR": 480,
-    "ORBIT": 340
-  },
-  "total_records": 2000,
-  "total_people": 84,
-  "codebase_included": false
+  "record_counts":{"ATLAS":420,"PULSE":360,"NOVA":400,"HARBOR":480,"ORBIT":340},
+  "total_records":2000,
+  "total_people":84,
+  "codebase_included":false
 }
