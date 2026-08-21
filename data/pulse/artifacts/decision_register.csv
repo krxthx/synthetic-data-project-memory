@@ -1,0 +1,6 @@
+decision_id,topic,decision,rationale,status
+PULSE-D01,Alert scope,"Phase 1 alerts target store operations, not employee-level scoring.",Avoid worker-surveillance concerns and keep the initial product focused on operational conditions.,Accepted
+PULSE-D02,Latency,15-minute analytical latency is accepted; real-time streaming is deferred.,The business can act within a 15-minute window and real-time infrastructure would add cost and operational complexity.,Accepted
+PULSE-D03,Pilot,Midwest region is the first production pilot.,"The region has representative store formats, strong operational sponsorship, and sufficiently stable telemetry.",Accepted
+PULSE-D04,Data platform,Pulse uses the shared analytical platform governed by Samir Patel.,Reusing the enterprise platform avoids a second analytics stack and aligns data-quality controls.,Accepted
+PULSE-D05,KPI governance,Enterprise KPI definitions override legacy regional scorecard definitions.,Comparable metrics are necessary for cross-region reporting and consistent alert behavior.,Accepted

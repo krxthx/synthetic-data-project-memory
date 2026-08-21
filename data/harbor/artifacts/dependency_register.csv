@@ -1,0 +1,3 @@
+dependency_id,project,dependency,status
+HARBOR-DEP01,ATLAS,pilot authentication dependency,Active
+HARBOR-DEP02,NOVA,account-team authorization model,Active

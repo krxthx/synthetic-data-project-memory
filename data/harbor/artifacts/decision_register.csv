@@ -1,0 +1,6 @@
+decision_id,topic,decision,rationale,status
+HARBOR-D01,Migration waves,Applications migrate in waves based on criticality and provisioning readiness.,A readiness-based sequence reduces operational risk and avoids blocking the program on difficult legacy apps.,Accepted
+HARBOR-D02,RBAC,"Role-based access is baseline, with governed exceptions.",Common role models simplify access review while allowing controlled exceptions for legitimate edge cases.,Accepted
+HARBOR-D03,Atlas bridge,Harbor provides an interim SSO bridge for the Atlas pilot.,Atlas can pilot without waiting for the full identity modernization while still using enterprise controls.,Accepted
+HARBOR-D04,Legacy apps,Legacy apps without SCIM are not forced into phase 1.,Custom provisioning for every legacy app would overload the first migration wave and increase risk.,Accepted
+HARBOR-D05,Privileged access,Privileged accounts require step-up controls before migration.,Administrative access has materially higher blast radius and needs stronger assurance before cutover.,Accepted

@@ -1,0 +1,6 @@
+decision_id,topic,decision,rationale,status
+ORBIT-D01,Forecast cadence,Monthly rolling forecast replaces quarterly-only planning.,Finance leadership needs earlier visibility into changing business conditions and assumptions.,Accepted
+ORBIT-D02,Actuals,ERP actuals remain authoritative; manual spreadsheet adjustments are exceptions.,A single authoritative actuals source reduces reconciliation and audit ambiguity.,Accepted
+ORBIT-D03,Platform,Orbit uses the shared analytical platform with Pulse.,Shared ingestion and analytical services reduce duplicate data engineering and governance overhead.,Accepted
+ORBIT-D04,AI scope,AI may draft variance narratives but cannot change forecasts.,Narrative assistance is reversible and reviewable; forecast values remain accountable human decisions.,Accepted
+ORBIT-D05,Scenario planning,"Scenario planning is phase 1 for finance leadership, phase 2 for business units.",A smaller initial audience reduces template proliferation while the governance model is proven.,Accepted

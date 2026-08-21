@@ -23,4 +23,24 @@ A dense synthetic enterprise corpus for testing long-term organizational and pro
 The dataset is synthetic. Its purpose is to test ingestion, temporal reasoning, provenance, conflict resolution, SME discovery, and multi-file long-term memory generation.
 
 ## Storage format
-Each project stores its canonical normalized corpus in `records.jsonl.gz`. Every record retains its original source (`teams`, `outlook`, `transcript`, `sharepoint`, `onedrive`, or `confluence`) and normalized metadata; compression changes storage only, not dataset semantics.
+Each project contains:
+
+- `records.jsonl`: the canonical normalized corpus, ordered by timestamp and record ID.
+- `sources/`: the six directly readable source-specific JSONL files for Teams, Outlook, transcripts, SharePoint, OneDrive and Confluence.
+- `artifacts/`: directly readable PDF, DOCX, CSV and SVG project artifacts.
+
+Every canonical record retains its original source (`teams`, `outlook`, `transcript`, `sharepoint`, `onedrive`, or `confluence`) and normalized metadata. The source-specific files contain the same 2,000 records split by originating system; they are mirrors, not additional records. The repository contains no compressed dataset archives.
+
+## Integrity
+
+Rebuild each canonical file from its six source files:
+
+```sh
+python3 scripts/rebuild_records.py
+```
+
+Validate record counts, source parity, global ID uniqueness, the absence of compressed files and artifact payloads:
+
+```sh
+python3 scripts/validate_dataset.py
+```

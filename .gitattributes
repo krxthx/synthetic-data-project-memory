@@ -1,0 +1,8 @@
+*.csv text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.svg text eol=lf
+*.docx binary
+*.pdf binary

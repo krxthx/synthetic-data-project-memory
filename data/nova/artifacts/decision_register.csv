@@ -1,0 +1,6 @@
+decision_id,topic,decision,rationale,status
+NOVA-D01,AI authority,Nova recommends actions but cannot automatically change CRM opportunity stages.,Sales accountability remains with the account team and irreversible automation would weaken trust.,Accepted
+NOVA-D02,Evidence,"Every recommendation must cite CRM, meeting, or account-plan evidence.",Sellers need to validate why a recommendation exists and distinguish evidence from model inference.,Accepted
+NOVA-D03,Pilot cohort,Pilot is limited to strategic account directors.,The cohort has richer account context and can provide disciplined qualitative evaluation.,Accepted
+NOVA-D04,Evaluation,Expansion requires human-reviewed quality and hallucination thresholds.,"Business value depends on recommendation reliability, not just engagement or click-through.",Accepted
+NOVA-D05,Permissions,Nova may only surface evidence already visible to the requesting account team.,AI must not become a side channel that bypasses CRM or account-document permissions.,Accepted

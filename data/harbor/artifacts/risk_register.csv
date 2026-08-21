@@ -1,6 +1,6 @@
 risk_id,risk,owner,probability,impact,status,mitigation,last_reviewed
-HARBOR-R01,legacy provisioning gaps,Ava White,Medium,High,Open,Mitigation owned by Ava White; review before steering. ,2026-02-11
-HARBOR-R02,role mapping ambiguity,Ethan Lee,High,High,Mitigating,Mitigation owned by Ethan Lee; review before steering. ,2026-03-12
-HARBOR-R03,Atlas timing pressure,Elena Patel,Medium,Medium,Open,Mitigation owned by Elena Patel; review before steering. ,2026-04-13
-HARBOR-R04,privileged-access control change,Ishaan Joshi,Low,High,Watching,Mitigation owned by Ishaan Joshi; review before steering. ,2026-05-14
-HARBOR-R05,directory cleanup,Adrian Pillai,High,Medium,Mitigating,Mitigation owned by Adrian Pillai; review before steering. ,2026-06-15
+HARBOR-R01,Legacy provisioning gaps,Ava White,Medium,High,Open,Mitigation owned by Ava White; review dependency and acceptance criteria before next steering committee.,2026-02-11
+HARBOR-R02,Role mapping ambiguity,Ethan Lee,High,High,Mitigating,Mitigation owned by Ethan Lee; review dependency and acceptance criteria before next steering committee.,2026-03-12
+HARBOR-R03,Atlas timing pressure,Elena Patel,Medium,Medium,Open,Mitigation owned by Elena Patel; review dependency and acceptance criteria before next steering committee.,2026-04-13
+HARBOR-R04,Privileged-access control change,Ishaan Joshi,Low,High,Watching,Mitigation owned by Ishaan Joshi; review dependency and acceptance criteria before next steering committee.,2026-05-14
+HARBOR-R05,Directory cleanup,Adrian Pillai,High,Medium,Mitigating,Mitigation owned by Adrian Pillai; review dependency and acceptance criteria before next steering committee.,2026-06-15

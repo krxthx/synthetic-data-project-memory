@@ -22,7 +22,10 @@ Orbit covers ERP actuals, monthly rolling forecasting, scenario planning, financ
 - **Pulse:** shared analytical-platform compute and batch windows.
 
 ## Sources
-`records.jsonl.gz` preserves the original Teams, Outlook, transcript, SharePoint, OneDrive and Confluence source identity.
+`records.jsonl` is the canonical normalized corpus. The six directly readable source-specific files used to rebuild it are in `sources/`.
+
+## Artifacts
+`artifacts/` contains 17 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster and casebook artifacts.
 
 ## People
-See `../people.json.gz` for roles, SME areas, responsibilities and contribution history.
+See `../people.json` for roles, SME areas, responsibilities and contribution history.

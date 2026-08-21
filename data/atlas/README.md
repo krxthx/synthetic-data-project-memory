@@ -24,10 +24,10 @@ Atlas contains business, delivery and architecture history around CRM identity, 
 - **Nova:** shared CRM identity-quality concerns.
 
 ## Sources
-`records.jsonl.gz` is the canonical normalized corpus. Every record retains its original `source` value: Teams, Outlook, calendar transcript, SharePoint, OneDrive or Confluence.
+`records.jsonl` is the canonical normalized corpus. The six directly readable source-specific files used to rebuild it are in `sources/`.
 
 ## People
-The organization-wide `../people.json.gz` directory contains member roles, project membership, SME areas, responsibilities, and what each person has built or contributed.
+The organization-wide `../people.json` file contains member roles, project membership, SME areas, responsibilities, and what each person has built or contributed.
 
 ## Artifacts
-`artifacts/` contains architecture views, decision/risk registers and rich project documents intended to overlap with the normalized source evidence.
+`artifacts/` contains 18 architecture views, decision/risk registers, project rosters, casebooks and rich project documents intended to overlap with the normalized source evidence.

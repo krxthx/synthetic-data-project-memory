@@ -24,7 +24,10 @@ Harbor covers SSO migration, RBAC, SCIM gaps, privileged access, directory clean
 - **Nova:** account-team authorization model.
 
 ## Sources
-`records.jsonl.gz` preserves source identity for Teams, Outlook, calendar transcripts, SharePoint, OneDrive and Confluence.
+`records.jsonl` is the canonical normalized corpus. The six directly readable source-specific files used to rebuild it are in `sources/`.
+
+## Artifacts
+`artifacts/` contains 17 directly readable architecture, decision, requirements, implementation, readiness, quality, risk, roster and casebook artifacts.
 
 ## People
-See `../people.json.gz` for project members, SMEs, responsibilities and what they built.
+See `../people.json` for project members, SMEs, responsibilities and what they built.

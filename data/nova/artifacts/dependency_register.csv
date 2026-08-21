@@ -1,0 +1,3 @@
+dependency_id,project,dependency,status
+NOVA-DEP01,ATLAS,CRM customer and account identity,Active
+NOVA-DEP02,HARBOR,identity role mappings and authorization model,Active
