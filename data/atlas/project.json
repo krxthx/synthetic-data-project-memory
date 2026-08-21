@@ -1,0 +1,15 @@
+{
+  "id": "ATLAS",
+  "name": "Atlas Customer Onboarding",
+  "domain": "Customer Operations",
+  "goal": "Modernize enterprise customer onboarding from signed deal to production handoff.",
+  "members": 17,
+  "target": 420,
+  "themes": [
+    "CRM identity",
+    "onboarding stage model",
+    "exception handling",
+    "Harbor SSO dependency",
+    "regional process variance"
+  ]
+}

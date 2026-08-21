@@ -1,0 +1,15 @@
+{
+  "id": "ORBIT",
+  "name": "Orbit Financial Planning",
+  "domain": "Finance",
+  "goal": "Replace fragmented planning spreadsheets with rolling forecast and scenario planning.",
+  "members": 15,
+  "target": 340,
+  "themes": [
+    "ERP actuals",
+    "rolling forecast",
+    "scenario planning",
+    "shared data platform",
+    "business-unit template variance"
+  ]
+}

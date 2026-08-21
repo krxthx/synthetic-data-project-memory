@@ -1,0 +1,351 @@
+[
+  {
+    "id": "P018",
+    "name": "Dev Ortiz",
+    "role": "Executive Sponsor",
+    "seniority": "leadership",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "store telemetry",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence store telemetry deliverable",
+      "Pulse Store Operations Intelligence executive sponsor playbook"
+    ],
+    "responsibilities": [
+      "Owns store telemetry decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P019",
+    "name": "Victor Mehta",
+    "role": "Business Owner",
+    "seniority": "leadership",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "alert thresholds",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence alert thresholds deliverable",
+      "Pulse Store Operations Intelligence business owner playbook"
+    ],
+    "responsibilities": [
+      "Owns alert thresholds decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P020",
+    "name": "Lena Thomas",
+    "role": "Program Manager",
+    "seniority": "management",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "regional KPI definitions",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence regional KPI definitions deliverable",
+      "Pulse Store Operations Intelligence program manager playbook"
+    ],
+    "responsibilities": [
+      "Owns regional KPI definitions decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P021",
+    "name": "Leah Pillai",
+    "role": "Project Manager",
+    "seniority": "management",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "data quality",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence data quality deliverable",
+      "Pulse Store Operations Intelligence project manager playbook"
+    ],
+    "responsibilities": [
+      "Owns data quality decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P022",
+    "name": "Daniel Shah",
+    "role": "Product Owner",
+    "seniority": "product",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "shared data platform capacity",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence shared data platform capacity deliverable",
+      "Pulse Store Operations Intelligence product owner playbook"
+    ],
+    "responsibilities": [
+      "Owns shared data platform capacity decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P023",
+    "name": "Miles Iyer",
+    "role": "Business Analyst",
+    "seniority": "analysis",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "store telemetry",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence store telemetry deliverable",
+      "Pulse Store Operations Intelligence business analyst playbook"
+    ],
+    "responsibilities": [
+      "Owns store telemetry decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P024",
+    "name": "Samir Mehta",
+    "role": "Business Analyst",
+    "seniority": "analysis",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "alert thresholds",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence alert thresholds deliverable",
+      "Pulse Store Operations Intelligence business analyst playbook"
+    ],
+    "responsibilities": [
+      "Owns alert thresholds decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P025",
+    "name": "Victor Scott",
+    "role": "Solution Architect",
+    "seniority": "architecture",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "regional KPI definitions",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence regional KPI definitions deliverable",
+      "Pulse Store Operations Intelligence solution architect playbook"
+    ],
+    "responsibilities": [
+      "Owns regional KPI definitions decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P026",
+    "name": "Claire Moore",
+    "role": "Enterprise Architect",
+    "seniority": "architecture",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "data quality",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence data quality deliverable",
+      "Pulse Store Operations Intelligence enterprise architect playbook"
+    ],
+    "responsibilities": [
+      "Owns data quality decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P027",
+    "name": "Ben Fernandez",
+    "role": "Tech Lead",
+    "seniority": "engineering",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "shared data platform capacity",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence shared data platform capacity deliverable",
+      "Pulse Store Operations Intelligence tech lead playbook"
+    ],
+    "responsibilities": [
+      "Owns shared data platform capacity decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P028",
+    "name": "Grace Williams",
+    "role": "Backend Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "store telemetry",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence store telemetry deliverable",
+      "Pulse Store Operations Intelligence backend engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns store telemetry decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P029",
+    "name": "Priya Green",
+    "role": "Frontend Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "alert thresholds",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence alert thresholds deliverable",
+      "Pulse Store Operations Intelligence frontend engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns alert thresholds decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P030",
+    "name": "Claire Lee",
+    "role": "Data Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "regional KPI definitions",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence regional KPI definitions deliverable",
+      "Pulse Store Operations Intelligence data engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns regional KPI definitions decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "P031",
+    "name": "Marcus Ortiz",
+    "role": "QA Lead",
+    "seniority": "quality",
+    "projects": [
+      "PULSE"
+    ],
+    "sme": [
+      "data quality",
+      "retail operations"
+    ],
+    "built": [
+      "Pulse Store Operations Intelligence data quality deliverable",
+      "Pulse Store Operations Intelligence qa lead playbook"
+    ],
+    "responsibilities": [
+      "Owns data quality decisions and delivery responsibilities for Pulse Store Operations Intelligence."
+    ]
+  },
+  {
+    "id": "ORG-001",
+    "name": "Marcus Green",
+    "role": "Enterprise Architecture Director",
+    "seniority": "leadership",
+    "projects": [
+      "ATLAS",
+      "PULSE",
+      "NOVA",
+      "HARBOR",
+      "ORBIT"
+    ],
+    "sme": [
+      "enterprise architecture",
+      "architecture governance",
+      "cross-project dependencies"
+    ],
+    "built": [
+      "Contoso architecture review board",
+      "shared integration principles"
+    ],
+    "responsibilities": [
+      "Resolves cross-project architecture conflicts and owns enterprise standards."
+    ]
+  },
+  {
+    "id": "ORG-002",
+    "name": "Samir Patel",
+    "role": "Data Platform Architect",
+    "seniority": "principal",
+    "projects": [
+      "PULSE",
+      "ORBIT",
+      "NOVA"
+    ],
+    "sme": [
+      "data platform",
+      "data quality",
+      "shared analytical services"
+    ],
+    "built": [
+      "Contoso analytical data platform"
+    ],
+    "responsibilities": [
+      "Owns shared analytical platform capacity, standards, and data-quality guidance."
+    ]
+  },
+  {
+    "id": "ORG-003",
+    "name": "Sofia Mendes",
+    "role": "Change Management Lead",
+    "seniority": "senior",
+    "projects": [
+      "ATLAS",
+      "PULSE",
+      "ORBIT"
+    ],
+    "sme": [
+      "adoption",
+      "training",
+      "operating model change"
+    ],
+    "built": [
+      "Contoso adoption playbook"
+    ],
+    "responsibilities": [
+      "Advises adoption, training, and operating-model changes across transformation programs."
+    ]
+  }
+]

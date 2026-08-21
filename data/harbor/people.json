@@ -1,0 +1,407 @@
+[
+  {
+    "id": "P048",
+    "name": "Daniel Thompson",
+    "role": "Executive Sponsor",
+    "seniority": "leadership",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SSO migration",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SSO migration deliverable",
+      "Harbor Identity Modernization executive sponsor playbook"
+    ],
+    "responsibilities": [
+      "Owns SSO migration decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P049",
+    "name": "Nina Scott",
+    "role": "Business Owner",
+    "seniority": "leadership",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "RBAC",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization RBAC deliverable",
+      "Harbor Identity Modernization business owner playbook"
+    ],
+    "responsibilities": [
+      "Owns RBAC decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P050",
+    "name": "Sara Kim",
+    "role": "Program Manager",
+    "seniority": "management",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SCIM gaps",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SCIM gaps deliverable",
+      "Harbor Identity Modernization program manager playbook"
+    ],
+    "responsibilities": [
+      "Owns SCIM gaps decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P051",
+    "name": "Leo Singh",
+    "role": "Project Manager",
+    "seniority": "management",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "privileged access",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization privileged access deliverable",
+      "Harbor Identity Modernization project manager playbook"
+    ],
+    "responsibilities": [
+      "Owns privileged access decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P052",
+    "name": "Leo Wilson",
+    "role": "Product Owner",
+    "seniority": "product",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "Atlas interim SSO",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization Atlas interim SSO deliverable",
+      "Harbor Identity Modernization product owner playbook"
+    ],
+    "responsibilities": [
+      "Owns Atlas interim SSO decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P053",
+    "name": "Ben Green",
+    "role": "Business Analyst",
+    "seniority": "analysis",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SSO migration",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SSO migration deliverable",
+      "Harbor Identity Modernization business analyst playbook"
+    ],
+    "responsibilities": [
+      "Owns SSO migration decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P054",
+    "name": "Ava White",
+    "role": "Business Analyst",
+    "seniority": "analysis",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "RBAC",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization RBAC deliverable",
+      "Harbor Identity Modernization business analyst playbook"
+    ],
+    "responsibilities": [
+      "Owns RBAC decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P055",
+    "name": "Ethan Lee",
+    "role": "Solution Architect",
+    "seniority": "architecture",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SCIM gaps",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SCIM gaps deliverable",
+      "Harbor Identity Modernization solution architect playbook"
+    ],
+    "responsibilities": [
+      "Owns SCIM gaps decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P056",
+    "name": "Elena Patel",
+    "role": "Enterprise Architect",
+    "seniority": "architecture",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "privileged access",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization privileged access deliverable",
+      "Harbor Identity Modernization enterprise architect playbook"
+    ],
+    "responsibilities": [
+      "Owns privileged access decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P057",
+    "name": "Ishaan Joshi",
+    "role": "Tech Lead",
+    "seniority": "engineering",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "Atlas interim SSO",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization Atlas interim SSO deliverable",
+      "Harbor Identity Modernization tech lead playbook"
+    ],
+    "responsibilities": [
+      "Owns Atlas interim SSO decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P058",
+    "name": "Adrian Pillai",
+    "role": "Backend Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SSO migration",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SSO migration deliverable",
+      "Harbor Identity Modernization backend engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns SSO migration decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P059",
+    "name": "Noah Mehta",
+    "role": "Frontend Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "RBAC",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization RBAC deliverable",
+      "Harbor Identity Modernization frontend engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns RBAC decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P060",
+    "name": "Kavya Pillai",
+    "role": "Data Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SCIM gaps",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SCIM gaps deliverable",
+      "Harbor Identity Modernization data engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns SCIM gaps decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P061",
+    "name": "Miles King",
+    "role": "QA Lead",
+    "seniority": "quality",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "privileged access",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization privileged access deliverable",
+      "Harbor Identity Modernization qa lead playbook"
+    ],
+    "responsibilities": [
+      "Owns privileged access decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P062",
+    "name": "Daniel Scott",
+    "role": "QA Engineer",
+    "seniority": "quality",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "Atlas interim SSO",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization Atlas interim SSO deliverable",
+      "Harbor Identity Modernization qa engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns Atlas interim SSO decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P063",
+    "name": "Maya Patel",
+    "role": "Change Management Lead",
+    "seniority": "change",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SSO migration",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SSO migration deliverable",
+      "Harbor Identity Modernization change management lead playbook"
+    ],
+    "responsibilities": [
+      "Owns SSO migration decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P064",
+    "name": "Sara Morgan",
+    "role": "Client Product Owner",
+    "seniority": "client",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "RBAC",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization RBAC deliverable",
+      "Harbor Identity Modernization client product owner playbook"
+    ],
+    "responsibilities": [
+      "Owns RBAC decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P065",
+    "name": "Dev Patel",
+    "role": "Client SME",
+    "seniority": "client",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "SCIM gaps",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization SCIM gaps deliverable",
+      "Harbor Identity Modernization client sme playbook"
+    ],
+    "responsibilities": [
+      "Owns SCIM gaps decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "P066",
+    "name": "Claire Singh",
+    "role": "Security SME",
+    "seniority": "sme",
+    "projects": [
+      "HARBOR"
+    ],
+    "sme": [
+      "privileged access",
+      "cybersecurity"
+    ],
+    "built": [
+      "Harbor Identity Modernization privileged access deliverable",
+      "Harbor Identity Modernization security sme playbook"
+    ],
+    "responsibilities": [
+      "Owns privileged access decisions and delivery responsibilities for Harbor Identity Modernization."
+    ]
+  },
+  {
+    "id": "ORG-001",
+    "name": "Marcus Green",
+    "role": "Enterprise Architecture Director",
+    "seniority": "leadership",
+    "projects": [
+      "ATLAS",
+      "PULSE",
+      "NOVA",
+      "HARBOR",
+      "ORBIT"
+    ],
+    "sme": [
+      "enterprise architecture",
+      "architecture governance",
+      "cross-project dependencies"
+    ],
+    "built": [
+      "Contoso architecture review board",
+      "shared integration principles"
+    ],
+    "responsibilities": [
+      "Resolves cross-project architecture conflicts and owns enterprise standards."
+    ]
+  }
+]

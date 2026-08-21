@@ -1,0 +1,15 @@
+{
+  "id": "HARBOR",
+  "name": "Harbor Identity Modernization",
+  "domain": "Cybersecurity",
+  "goal": "Modernize enterprise identity, provisioning and access governance.",
+  "members": 19,
+  "target": 480,
+  "themes": [
+    "SSO migration",
+    "RBAC",
+    "SCIM gaps",
+    "privileged access",
+    "Atlas interim SSO"
+  ]
+}

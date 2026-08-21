@@ -1,0 +1,15 @@
+{
+  "id": "NOVA",
+  "name": "Nova Sales Opportunity Intelligence",
+  "domain": "Sales",
+  "goal": "Assist strategic account teams with evidence-backed opportunity recommendations.",
+  "members": 16,
+  "target": 400,
+  "themes": [
+    "CRM signals",
+    "meeting evidence",
+    "recommendation explainability",
+    "human review",
+    "account permissions"
+  ]
+}

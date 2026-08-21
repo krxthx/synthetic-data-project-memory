@@ -1,0 +1,6 @@
+risk_id,risk,owner,probability,impact,status,mitigation,last_reviewed
+PULSE-R01,missing telemetry,Samir Mehta,Medium,High,Open,Mitigation owned by Samir Mehta; review before steering. ,2026-02-11
+PULSE-R02,high false positives,Victor Scott,High,High,Mitigating,Mitigation owned by Victor Scott; review before steering. ,2026-03-12
+PULSE-R03,regional KPI conflicts,Claire Moore,Medium,Medium,Open,Mitigation owned by Claire Moore; review before steering. ,2026-04-13
+PULSE-R04,platform capacity contention,Ben Fernandez,Low,High,Watching,Mitigation owned by Ben Fernandez; review before steering. ,2026-05-14
+PULSE-R05,store adoption resistance,Grace Williams,High,Medium,Mitigating,Mitigation owned by Grace Williams; review before steering. ,2026-06-15

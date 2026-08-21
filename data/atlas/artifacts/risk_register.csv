@@ -1,0 +1,6 @@
+risk_id,risk,owner,probability,impact,status,mitigation,last_reviewed
+ATLAS-R01,duplicate customer records,Arjun Lee,Medium,High,Open,Mitigation owned by Arjun Lee; review before steering. ,2026-02-11
+ATLAS-R02,regional stage mismatch,Sofia Green,High,High,Mitigating,Mitigation owned by Sofia Green; review before steering. ,2026-03-12
+ATLAS-R03,Harbor SSO dependency,Rhea Pillai,Medium,Medium,Open,Mitigation owned by Rhea Pillai; review before steering. ,2026-04-13
+ATLAS-R04,legal exception review,Arjun Scott,Low,High,Watching,Mitigation owned by Arjun Scott; review before steering. ,2026-05-14
+ATLAS-R05,client readiness variance,Grace Iyer,High,Medium,Mitigating,Mitigation owned by Grace Iyer; review before steering. ,2026-06-15

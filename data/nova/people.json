@@ -1,0 +1,369 @@
+[
+  {
+    "id": "P032",
+    "name": "Kavya Morgan",
+    "role": "Executive Sponsor",
+    "seniority": "leadership",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "CRM signals",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence CRM signals deliverable",
+      "Nova Sales Opportunity Intelligence executive sponsor playbook"
+    ],
+    "responsibilities": [
+      "Owns CRM signals decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P033",
+    "name": "Miles Nair",
+    "role": "Business Owner",
+    "seniority": "leadership",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "meeting evidence",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence meeting evidence deliverable",
+      "Nova Sales Opportunity Intelligence business owner playbook"
+    ],
+    "responsibilities": [
+      "Owns meeting evidence decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P034",
+    "name": "Meera Nair",
+    "role": "Program Manager",
+    "seniority": "management",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "recommendation explainability",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence recommendation explainability deliverable",
+      "Nova Sales Opportunity Intelligence program manager playbook"
+    ],
+    "responsibilities": [
+      "Owns recommendation explainability decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P035",
+    "name": "Leah Mendes",
+    "role": "Project Manager",
+    "seniority": "management",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "human review",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence human review deliverable",
+      "Nova Sales Opportunity Intelligence project manager playbook"
+    ],
+    "responsibilities": [
+      "Owns human review decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P036",
+    "name": "Rachel Williams",
+    "role": "Product Owner",
+    "seniority": "product",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "account permissions",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence account permissions deliverable",
+      "Nova Sales Opportunity Intelligence product owner playbook"
+    ],
+    "responsibilities": [
+      "Owns account permissions decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P037",
+    "name": "Farah Joshi",
+    "role": "Business Analyst",
+    "seniority": "analysis",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "CRM signals",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence CRM signals deliverable",
+      "Nova Sales Opportunity Intelligence business analyst playbook"
+    ],
+    "responsibilities": [
+      "Owns CRM signals decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P038",
+    "name": "Sara Brooks",
+    "role": "Business Analyst",
+    "seniority": "analysis",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "meeting evidence",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence meeting evidence deliverable",
+      "Nova Sales Opportunity Intelligence business analyst playbook"
+    ],
+    "responsibilities": [
+      "Owns meeting evidence decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P039",
+    "name": "Meera Nguyen",
+    "role": "Solution Architect",
+    "seniority": "architecture",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "recommendation explainability",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence recommendation explainability deliverable",
+      "Nova Sales Opportunity Intelligence solution architect playbook"
+    ],
+    "responsibilities": [
+      "Owns recommendation explainability decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P040",
+    "name": "Vikram Green",
+    "role": "Enterprise Architect",
+    "seniority": "architecture",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "human review",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence human review deliverable",
+      "Nova Sales Opportunity Intelligence enterprise architect playbook"
+    ],
+    "responsibilities": [
+      "Owns human review decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P041",
+    "name": "Tara Park",
+    "role": "Tech Lead",
+    "seniority": "engineering",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "account permissions",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence account permissions deliverable",
+      "Nova Sales Opportunity Intelligence tech lead playbook"
+    ],
+    "responsibilities": [
+      "Owns account permissions decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P042",
+    "name": "Marcus Shah",
+    "role": "Backend Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "CRM signals",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence CRM signals deliverable",
+      "Nova Sales Opportunity Intelligence backend engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns CRM signals decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P043",
+    "name": "Tara Wilson",
+    "role": "Frontend Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "meeting evidence",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence meeting evidence deliverable",
+      "Nova Sales Opportunity Intelligence frontend engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns meeting evidence decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P044",
+    "name": "Sofia Fernandez",
+    "role": "Data Engineer",
+    "seniority": "engineering",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "recommendation explainability",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence recommendation explainability deliverable",
+      "Nova Sales Opportunity Intelligence data engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns recommendation explainability decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P045",
+    "name": "Tara Mendes",
+    "role": "QA Lead",
+    "seniority": "quality",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "human review",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence human review deliverable",
+      "Nova Sales Opportunity Intelligence qa lead playbook"
+    ],
+    "responsibilities": [
+      "Owns human review decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P046",
+    "name": "Ethan Wilson",
+    "role": "QA Engineer",
+    "seniority": "quality",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "account permissions",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence account permissions deliverable",
+      "Nova Sales Opportunity Intelligence qa engineer playbook"
+    ],
+    "responsibilities": [
+      "Owns account permissions decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "P047",
+    "name": "Miles Stein",
+    "role": "Change Management Lead",
+    "seniority": "change",
+    "projects": [
+      "NOVA"
+    ],
+    "sme": [
+      "CRM signals",
+      "sales"
+    ],
+    "built": [
+      "Nova Sales Opportunity Intelligence CRM signals deliverable",
+      "Nova Sales Opportunity Intelligence change management lead playbook"
+    ],
+    "responsibilities": [
+      "Owns CRM signals decisions and delivery responsibilities for Nova Sales Opportunity Intelligence."
+    ]
+  },
+  {
+    "id": "ORG-001",
+    "name": "Marcus Green",
+    "role": "Enterprise Architecture Director",
+    "seniority": "leadership",
+    "projects": [
+      "ATLAS",
+      "PULSE",
+      "NOVA",
+      "HARBOR",
+      "ORBIT"
+    ],
+    "sme": [
+      "enterprise architecture",
+      "architecture governance",
+      "cross-project dependencies"
+    ],
+    "built": [
+      "Contoso architecture review board",
+      "shared integration principles"
+    ],
+    "responsibilities": [
+      "Resolves cross-project architecture conflicts and owns enterprise standards."
+    ]
+  },
+  {
+    "id": "ORG-002",
+    "name": "Samir Patel",
+    "role": "Data Platform Architect",
+    "seniority": "principal",
+    "projects": [
+      "PULSE",
+      "ORBIT",
+      "NOVA"
+    ],
+    "sme": [
+      "data platform",
+      "data quality",
+      "shared analytical services"
+    ],
+    "built": [
+      "Contoso analytical data platform"
+    ],
+    "responsibilities": [
+      "Owns shared analytical platform capacity, standards, and data-quality guidance."
+    ]
+  }
+]

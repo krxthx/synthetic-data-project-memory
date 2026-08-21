@@ -1,0 +1,15 @@
+{
+  "id": "PULSE",
+  "name": "Pulse Store Operations Intelligence",
+  "domain": "Retail Operations",
+  "goal": "Create a unified operational intelligence and alerting layer for regional stores.",
+  "members": 14,
+  "target": 360,
+  "themes": [
+    "store telemetry",
+    "alert thresholds",
+    "regional KPI definitions",
+    "data quality",
+    "shared data platform capacity"
+  ]
+}

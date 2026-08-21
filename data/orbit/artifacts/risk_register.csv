@@ -1,0 +1,6 @@
+risk_id,risk,owner,probability,impact,status,mitigation,last_reviewed
+ORBIT-R01,template incompatibility,Meera Iyer,Medium,High,Open,Mitigation owned by Meera Iyer; review before steering. ,2026-02-11
+ORBIT-R02,platform capacity contention,Gabriel Chen,High,High,Mitigating,Mitigation owned by Gabriel Chen; review before steering. ,2026-03-12
+ORBIT-R03,ERP close delay,Farah Martin,Medium,Medium,Open,Mitigation owned by Farah Martin; review before steering. ,2026-04-13
+ORBIT-R04,scenario scope expansion,Ethan Rao,Low,High,Watching,Mitigation owned by Ethan Rao; review before steering. ,2026-05-14
+ORBIT-R05,manual adjustment governance,Samir Nair,High,Medium,Mitigating,Mitigation owned by Samir Nair; review before steering. ,2026-06-15

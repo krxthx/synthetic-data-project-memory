@@ -1,0 +1,6 @@
+risk_id,risk,owner,probability,impact,status,mitigation,last_reviewed
+NOVA-R01,inconsistent sales notes,Sara Brooks,Medium,High,Open,Mitigation owned by Sara Brooks; review before steering. ,2026-02-11
+NOVA-R02,recent-meeting bias,Meera Nguyen,High,High,Mitigating,Mitigation owned by Meera Nguyen; review before steering. ,2026-03-12
+NOVA-R03,qualification disagreement,Vikram Green,Medium,Medium,Open,Mitigation owned by Vikram Green; review before steering. ,2026-04-13
+NOVA-R04,CRM permission variance,Tara Park,Low,High,Watching,Mitigation owned by Tara Park; review before steering. ,2026-05-14
+NOVA-R05,poor evidence quality,Marcus Shah,High,Medium,Mitigating,Mitigation owned by Marcus Shah; review before steering. ,2026-06-15
